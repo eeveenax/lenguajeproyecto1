@@ -20,32 +20,39 @@ if ($conn->connect_error) {
 
 // Comprobar si se recibieron los datos del formulario
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Obtener y sanitizar los datos del formulario
-    $nombre = $conn->real_escape_string($_POST['nombre']);
-    $contrasena = $conn->real_escape_string($_POST['contrasena']);
-    $nacionalidad = $conn->real_escape_string($_POST['nacionalidad']);
-    $genero = $conn->real_escape_string($_POST['genero']);
-    $modulo = $conn->real_escape_string($_POST['modulo']);
-    $email = $conn->real_escape_string($_POST['email']);
-    $num_telf = $conn->real_escape_string($_POST['num_telf']);
-    $mensaje = $conn->real_escape_string($_POST['textoArea']);
+    // Verificar si los campos están vacíos o no definidos
+    $nombre = isset($_POST['nombre']) ? $conn->real_escape_string($_POST['nombre']) : null;
+    $contrasena = isset($_POST['contrasena']) ? $conn->real_escape_string($_POST['contrasena']) : null;
+    $nacionalidad = isset($_POST['nacionalidad']) ? $conn->real_escape_string($_POST['nacionalidad']) : null;
+    $genero = isset($_POST['genero']) ? $conn->real_escape_string($_POST['genero']) : null;
+    $modulo = isset($_POST['modulo']) ? $conn->real_escape_string($_POST['modulo']) : null;
+    $email = isset($_POST['email']) ? $conn->real_escape_string($_POST['email']) : null;
+    $num_telf = isset($_POST['num_telf']) ? $conn->real_escape_string($_POST['num_telf']) : null;
+    $mensaje = isset($_POST['textoArea']) ? $conn->real_escape_string($_POST['textoArea']) : null;
 
-    // Preparar la consulta SQL
-    $sql = "INSERT INTO usuarios_contacto (nombre, contrasena, nacionalidad, genero, modulo, email, num_telf, mensaje) 
-            VALUES ('$nombre', '$contrasena', '$nacionalidad', '$genero', '$modulo', '$email', '$num_telf', '$mensaje')";
-
-    // Ejecutar la consulta
-    if ($conn->query($sql) === TRUE) {
-        // Mensaje de éxito
-        echo "<script>alert('¡Datos enviados correctamente!'); window.location.href='http://localhost/proyecto/archivos/subpaginas/contacto/contacto.html';</script>";
+    // Comprobamos si los datos están correctamente recibidos y si no están vacíos
+    if (empty($nombre) || empty($contrasena) || empty($nacionalidad) || empty($genero) || empty($modulo) || empty($email) || empty($num_telf) || empty($mensaje)) {
+        echo "<script>alert('Por favor, rellena todos los campos del formulario.');</script>";
     } else {
-        echo "Error al insertar los datos: " . $conn->error;
+        // Preparar la consulta SQL
+        $sql = "INSERT INTO usuarios_contacto (nombre, contrasena, nacionalidad, genero, modulo, email, num_telf, mensaje) 
+                VALUES ('$nombre', '$contrasena', '$nacionalidad', '$genero', '$modulo', '$email', '$num_telf', '$mensaje')";
+
+        // Ejecutar la consulta
+        if ($conn->query($sql) === TRUE) {
+            // Mensaje de éxito
+            echo "<script>alert('¡Datos enviados correctamente!');</script>";
+        } else {
+            echo "Error al insertar los datos: " . $conn->error;
+        }
     }
 }
 
 // Cerrar la conexión
 $conn->close();
+
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -53,9 +60,6 @@ $conn->close();
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contacto</title>
-    <script>
-        window.location.href = 'http://localhost/proyecto/archivos/subpaginas/contacto/contacto.html';
-    </script>
     <link rel="shortcut icon" href="img/contacto.png" />
     <link rel="stylesheet" href="contacto.css" />
   </head>
@@ -159,12 +163,6 @@ $conn->close();
     
       </div>
     </form>
-
-    <audio
-          src="img/sonidoMensaje.mp3"
-          id="sonidoEnviar"
-          preload="auto"
-        ></audio>
     <br />
     <footer>
       <div class="bocadillo">

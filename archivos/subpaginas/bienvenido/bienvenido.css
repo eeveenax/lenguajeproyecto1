@@ -31,7 +31,7 @@ body {
 .content {
   text-align: center;
   animation-name: fade-out;
-  animation-duration: 3s;
+  animation-duration: 2s;
 }
 @keyframes fade-out {
   0% {

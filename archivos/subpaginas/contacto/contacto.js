@@ -1,5 +1,4 @@
 // Confetti animation
-
 const canvas = document.getElementById("confettiCanvas");
 const ctx = canvas.getContext("2d");
 const colors = [
@@ -82,29 +81,49 @@ window.addEventListener("resize", resizeCanvas);
 canvas.addEventListener("mousemove", handleMouseMove);
 
 var miboton = document.getElementById("miboton");
-var sonidoAudio = document.getElementById("sonidoEnviar");
 
 miboton.addEventListener("click", function (event) {
   event.preventDefault(); // Evita el envío inmediato del formulario
 
-  const rect = document.getElementById("formulario").getBoundingClientRect();
-  mousePos.x = rect.left + rect.width / 2;
-  mousePos.y = rect.top + rect.height;
-  isExploding = true;
+  // Validación de los campos del formulario
+  var nombre = document.getElementById("nombre").value;
+  var contrasena = document.getElementById("contrasena").value;
+  var nacionalidad = document.querySelector(
+    "select[name='nacionalidad']"
+  ).value;
+  var genero = document.querySelector("input[name='genero']:checked");
+  var modulo = document.querySelector("input[name='modulo']:checked");
+  var email = document.querySelector("input[name='email']").value;
+  var num_telf = document.querySelector("input[name='num_telf']").value;
+  var mensaje = document.querySelector("textarea[name='textoArea']").value;
 
-  // Reproducir el sonido
-  sonidoAudio
-    .play()
-    .then(() => {
-      // Esperar a que el sonido termine de reproducirse antes de enviar el formulario
-      sonidoAudio.onended = function () {
-        document.getElementById("formulario").submit(); // Envía el formulario después de que el sonido termine
-      };
-    })
-    .catch((error) => {
-      console.error("Error al reproducir el sonido:", error);
-      document.getElementById("formulario").submit(); // Si hubo un error, envía el formulario de inmediato
-    });
+  // Verificar si algún campo requerido está vacío
+  if (
+    !nombre ||
+    !contrasena ||
+    !nacionalidad ||
+    !genero ||
+    !modulo ||
+    !email ||
+    !num_telf ||
+    !mensaje
+  ) {
+    // Mostrar el mensaje de error si algún campo está vacío
+    alert("Por favor, rellena todos los campos del formulario.");
+  } else {
+    // Mostrar los confetis si todos los campos están llenos
+    const rect = document.getElementById("formulario").getBoundingClientRect();
+    mousePos.x = rect.left + rect.width / 2;
+    mousePos.y = rect.top + rect.height;
+
+    isExploding = true; // Iniciar la animación de confeti
+
+    // Luego de un retraso (por ejemplo, 2 segundos), enviar el formulario
+    setTimeout(function () {
+      const formulario = document.getElementById("formulario");
+      formulario.submit(); // Enviar el formulario
+    }, 2000); // Esperar 2 segundos para que los confetis se muestren
+  }
 });
 
 const fotoyo = document.querySelector(".fotoYo");
@@ -113,5 +132,4 @@ const fotoyoquieta = document.querySelector(".fotoyoquieta");
 fotoyo.addEventListener("animationend", function () {
   fotoyo.style.display = "none";
   fotoyoquieta.style.display = "block";
-  document.getElementById("navegador").style.display = "block";
 });
