@@ -1,0 +1,236 @@
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: #e5f6f0;
+}
+
+.menu {
+  position: fixed;
+  left: 0;
+  z-index: 1000;
+  margin: 12vh 2vh;
+  cursor: pointer;
+}
+
+nav {
+  background-color: #bcf3c9;
+  width: 200px;
+  height: 300px;
+  padding: 20px 10px 10px 20px;
+  text-align: left;
+  display: none;
+  left: 0;
+  animation-name: slide-in;
+  opacity: 0;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+  margin-top: 18vh;
+  position: fixed;
+}
+
+@keyframes slide-in {
+  from {
+    transform: translateX(-250px); /* Empieza fuera de la pantalla */
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0); /* Termina en su posición actual */
+    opacity: 0.9;
+  }
+}
+
+nav.mostrar {
+  display: block;
+}
+
+nav a {
+  color: black;
+  text-decoration: none;
+  display: block;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+}
+
+.tabanner {
+  height: 2cm;
+  width: 100%;
+  background-color: #72d498;
+}
+
+h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  color: rgb(32, 54, 32);
+  width: 500px;
+}
+
+.left,
+.right {
+  position: relative;
+  opacity: 0;
+  animation: slideIn 5s forwards;
+}
+
+.left {
+  animation-name: slideInLeft;
+}
+
+.right {
+  animation-name: slideInRight;
+}
+
+@keyframes slideInLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(-8%);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInRight {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.tabla2 {
+  border-color: #29425d;
+  text-align: center;
+}
+th {
+  color: #0a3e76;
+  border: none;
+}
+
+td {
+  color: black;
+  border-color: #0a3e76;
+}
+.ta {
+  text-align: justify;
+  padding: 1% 20% 3%;
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.ejemplosTA {
+  text-align: center;
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #0f632f;
+}
+
+#audiodescripcion,
+#descripcion_sordos {
+  text-decoration: underline;
+  animation: gelatine 5s infinite;
+}
+@keyframes gelatine {
+  from,
+  to {
+    transform: scale(1, 1);
+  }
+  25% {
+    transform: scale(0.9, 1.1);
+  }
+  50% {
+    transform: scale(1.1, 0.9);
+  }
+  75% {
+    transform: scale(0.95, 1.05);
+  }
+}
+
+.ejemplosTA p {
+  text-align: justify;
+  color: black;
+  margin-left: 20vh;
+  margin-right: 20vh;
+  max-width: 400px;
+}
+
+.slider {
+  width: 50%; /* Ajusta según tus necesidades */
+  height: 300px; /* Altura del slider */
+  overflow: hidden; /* Oculta el desbordamiento */
+  position: relative; /* Para que los elementos hijos se posicionen correctamente */
+}
+
+figure {
+  position: relative;
+  left: 0;
+  width: 400%; /* 4 imágenes, cada una ocupa el 25% */
+  animation: slide 10s infinite; /* Nombre de la animación y duración */
+  margin: 0; /* Elimina el margen por defecto del figure */
+}
+
+.slide {
+  position: relative;
+  width: 25%; /* Cada slide ocupa el 25% del total */
+  float: left; /* Permite que los slides se alineen horizontalmente */
+}
+
+.slide img {
+  width: 100%; /* Asegura que la imagen ocupe el 100% del contenedor */
+  height: 100%; /* Asegura que la imagen ocupe la altura del contenedor */
+  object-fit: contain; /* O usa 'contain' si prefieres ver la imagen completa sin recortes */
+}
+
+@keyframes slide {
+  0% {
+    left: 0;
+  }
+  10% {
+    left: 0;
+  }
+  20% {
+    left: -100%;
+  }
+  30% {
+    left: -100%;
+  }
+  45% {
+    left: -200%;
+  }
+  50% {
+    left: -200%;
+  }
+  60% {
+    left: -300%;
+  }
+  65% {
+    left: -300%;
+  }
+  75% {
+    left: -200%;
+  }
+  78% {
+    left: -200%;
+  }
+  80% {
+    left: -100%;
+  }
+  90% {
+    left: -100%;
+  }
+  95% {
+    left: 0;
+  }
+  100% {
+    left: 0;
+  }
+}

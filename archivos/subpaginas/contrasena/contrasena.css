@@ -1,0 +1,186 @@
+@charset "UTF-8";
+:root {
+  --duration: 4s;
+}
+
+body {
+  display: flex;
+  flex-direction: column; /* Opción 1: Si deseas que los elementos se apilen verticalmente */
+  justify-content: center; /* Centrar verticalmente */
+  align-items: center; /* Centrar horizontalmente */
+  height: 100vh; /* Ocupa toda la altura de la ventana */
+  width: 100vw; /* Ocupa toda la anchura de la ventana */
+  margin: 0; /* Eliminar márgenes por defecto */
+  background: black;
+  overflow: hidden;
+}
+
+.old-page {
+  position: absolute;
+  inset: 0;
+  background: url("img/candado.png") center center no-repeat;
+  background-size: cover;
+  transform: scale(1.5);
+}
+@media (orientation: portrait) {
+  .old-page {
+    -webkit-mask: url("https://assets.codepen.io/907471/tail.svg?v1") center top no-repeat, url("https://assets.codepen.io/907471/space.svg?v42") center center no-repeat, url("https://assets.codepen.io/907471/ncc1701.svg") center center no-repeat;
+            mask: url("https://assets.codepen.io/907471/tail.svg?v1") center top no-repeat, url("https://assets.codepen.io/907471/space.svg?v42") center center no-repeat, url("https://assets.codepen.io/907471/ncc1701.svg") center center no-repeat;
+    -webkit-mask-repeat: no-repeat;
+            mask-repeat: no-repeat;
+    -webkit-mask-size: 10rem 20rem, 300% 300%, 100% 30%;
+            mask-size: 10rem 20rem, 300% 300%, 100% 30%;
+    animation: hide-view-portrait var(--duration) cubic-bezier(0.975, -0.005, 0, 1.02);
+    animation-fill-mode: forwards;
+  }
+}
+@media (orientation: landscape) {
+  .old-page {
+    -webkit-mask: url("https://assets.codepen.io/907471/tail.svg?v1") center top no-repeat, url("https://assets.codepen.io/907471/space-landscape.svg?v4") center center no-repeat, url("https://assets.codepen.io/907471/ncc1701.svg") center center no-repeat;
+            mask: url("https://assets.codepen.io/907471/tail.svg?v1") center top no-repeat, url("https://assets.codepen.io/907471/space-landscape.svg?v4") center center no-repeat, url("https://assets.codepen.io/907471/ncc1701.svg") center center no-repeat;
+    -webkit-mask-repeat: no-repeat;
+            mask-repeat: no-repeat;
+    -webkit-mask-size: 10rem 30rem, 500% 500%, 100% 30%;
+            mask-size: 10rem 30rem, 500% 500%, 100% 30%;
+    animation: hide-view-landscape var(--duration) cubic-bezier(0.975, -0.005, 0, 1.02);
+    animation-fill-mode: forwards;
+  }
+}
+@media (orientation: landscape) and (max-height: 300px) {
+  .old-page {
+    -webkit-mask-size: 10rem 10rem, 500% 500%, 100% 30%;
+            mask-size: 10rem 10rem, 500% 500%, 100% 30%;
+  }
+}
+
+@keyframes hide-view-portrait {
+  from {
+    -webkit-mask-position: 50% 120%, 50% 0%, 50% 150%;
+            mask-position: 50% 120%, 50% 0%, 50% 150%;
+    transform: scale(1.5);
+  }
+  45% {
+    transform: scale(1);
+  }
+  50% {
+    -webkit-mask-position: 50% 120%, 50% 80%, 50% 60%;
+            mask-position: 50% 120%, 50% 80%, 50% 60%;
+  }
+  80% {
+    -webkit-mask-position: 50% -60%, 50% 140%, 50% -70%;
+            mask-position: 50% -60%, 50% 140%, 50% -70%;
+  }
+  to {
+    -webkit-mask-position: 50% -60%, 50% 140%, 50% -70%;
+            mask-position: 50% -60%, 50% 140%, 50% -70%;
+    transform: scale(1);
+  }
+}
+@keyframes hide-view-landscape {
+  from {
+    -webkit-mask-position: 50% 120%, 50% 0%, 50% 150%;
+            mask-position: 50% 120%, 50% 0%, 50% 150%;
+    transform: scale(1.5);
+  }
+  45% {
+    transform: scale(1);
+  }
+  50% {
+    -webkit-mask-position: 50% 120%, 50% 72%, 50% 60%;
+            mask-position: 50% 120%, 50% 72%, 50% 60%;
+  }
+  80% {
+    -webkit-mask-position: 50% -80%, 50% 140%, 50% -70%;
+            mask-position: 50% -80%, 50% 140%, 50% -70%;
+  }
+  to {
+    -webkit-mask-position: 50% -80%, 50% 140%, 50% -70%;
+            mask-position: 50% -80%, 50% 140%, 50% -70%;
+    transform: scale(1);
+  }
+}
+.new-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centrar verticalmente los elementos dentro */
+  align-items: center; /* Centrar horizontalmente los elementos dentro */
+  animation: show var(--duration) cubic-bezier(0.975, -0.005, 0, 1.02);
+  animation-fill-mode: forwards;
+  opacity: 0; /* Comienza invisible */
+}
+
+@keyframes show {
+  from {
+    filter: saturate(0%);
+    opacity: 0; /* Inicialmente invisible */
+  }
+  to {
+    filter: saturate(100%);
+    opacity: 1; /* Al final completamente visible */
+  }
+}
+.elementos {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #84dcc6;
+  height: 450px;
+  width: 500px;
+  border-radius: 10%;
+}
+
+a {
+  text-decoration: none;
+  font-size: 14px;
+  color: black;
+}
+
+.formulario {
+  margin-top: -60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  font-size: 20px;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.textoContrasena {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  min-height: 100px;
+  font-size: 20px;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.botonBuscar {
+  border: none;
+  color: white;
+  padding: 14px 28px;
+  cursor: pointer;
+  border-radius: 5px;
+  background-color: hsl(218, 4%, 50%);
+  transition: transform 0.3s ease-in-out;
+}
+
+.botonBuscar:hover {
+  background-color: #3d444c;
+}
+
+.botonBuscar:active {
+  transform: scale(0.9);
+}
+
+.mensaje-error {
+  color: black;
+  text-align: center;
+  font-size: 14px;
+  margin-top: 10px;
+  font-weight: bold;
+  margin-left: 10px;
+}/*# sourceMappingURL=contrasena.css.map */

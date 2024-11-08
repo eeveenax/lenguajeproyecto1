@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>EveliaGilParedes</title>
+    <link rel="stylesheet" href="practica2.css" />
+    <script async type="text/javascript" src="practica2.js"></script>
+  </head>
+  <body class="body">
+    <br />
+    <div class="banner">
+      <img class="imagenDragon" src="img/dragon.png" width="60" height="70" />
+      <label id="bannerTexto">Traducción Audiovisual</label>
+      <img class="imagenDragon2" src="img/dragon2.png" width="60" height="70" />
+    </div>
+    <img
+      src="img/menu.png"
+      alt="menu icono"
+      width="20"
+      height="20"
+      class="menu"
+      id="menu"
+      style="display: none"
+    />
+    <nav class="navegador" id="navegador" style="display: none">
+      <a
+        href="http://localhost\proyecto\archivos\subpaginas\subtitulacion\subtitulado.html"
+        >Subtitulación</a
+      >
+
+      <a
+        href="http://localhost/proyecto/archivos/subpaginas/doblaje/doblaje.html"
+        >Doblaje</a
+      >
+      <a href="http://localhost/proyecto/archivos/subpaginas/ta/ta.html">TA</a>
+      <a
+        href="http://localhost/proyecto/archivos/subpaginas/tautomatica/tautomatica.html"
+        >Traducción Automática</a
+      >
+      <a
+        href="http://localhost/proyecto/archivos/subpaginas/consultas/consulta.html"
+        >Consultas</a
+      >
+      <a
+        href="http://localhost/proyecto/archivos/subpaginas/documentos/documentos.html"
+        >Documentos</a
+      >
+      <a
+        href="http://localhost/proyecto/archivos/subpaginas/busqueda/busqueda.html"
+        style="display: none"
+        >Búsqueda</a
+      >
+    </nav>
+    <h3 class="citaT">
+      “Traducir es hacer un viaje por un país extranjero.” <br />
+      George Steiner.
+    </h3>
+
+    <p class="traduccionA">
+      La traducción consiste en obtener un texto B a partir de un texto B, el
+      cual se encuentra redactado en una lengua distinta a la original. Aunque
+      hay muchos tipos de traducción, la que destaco en este breve artículo es
+      la <b>traducción audiovisual o TA</b> no solo por la gran cantidad de
+      productos que podemos obtener: doblaje, subtitulado... sino por la
+      creatividad y originalidad que se necesita para llevar a cabo estos
+      proyectos.
+    </p>
+
+    <br />
+    <div class="container">
+      <div class="imagen_hola">
+        <img src="img/hola/HOLA.png" alt="Hola" width="250" height="200" />
+      </div>
+      <div class="carrusel">
+        <div class="carrusel-imagenes">
+          <img
+            src="img/hola/HOLA (1).png"
+            class="imagen-animada"
+            alt="Hola 1"
+          />
+          <img
+            src="img/hola/HOLA (2).png"
+            class="imagen-animada"
+            alt="Hola 2"
+          />
+          <img
+            src="img/hola/HOLA (3).png"
+            class="imagen-animada"
+            alt="Hola 3"
+          />
+          <img
+            src="img/hola/HOLA (5).png"
+            class="imagen-animada"
+            alt="Hola 5"
+          />
+          <img
+            src="img/hola/HOLA (7).png"
+            class="imagen-animada"
+            alt="Hola 7"
+          />
+          <img
+            src="img/hola/HOLA (8).png"
+            class="imagen-animada"
+            alt="Hola 8"
+          />
+        </div>
+      </div>
+    </div>
+
+    <br />
+    <div>
+      <sup id="sup"> Índice</sup>
+      <ol>
+        <li>
+          Tipos de Traducción
+          <ol type="a">
+            <li>Subtitulación</li>
+            <li>Doblaje</li>
+            <li>Traducción accesible</li>
+          </ol>
+        </li>
+        <li>Traductor automático</li>
+        <li>Formulario y contacto</li>
+      </ol>
+    </div>
+
+    <br />
+
+    <table border="5px" class="tablaUno">
+      <tr>
+        <th colspan="3">Tipos de traducción</th>
+      </tr>
+      <tr>
+        <td>
+          <a href="img/subtitulacion.jpg" target="_blank">Subtitulación</a>
+        </td>
+        <td>
+          <a href="img/doblaje.jpeg" target="_blank">Doblaje</a>
+        </td>
+        <td>
+          <a href="img/accesible.png" target="_blank">Traducción Accesible</a>
+        </td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>Voces Superpuestas</td>
+        <td>Audiodescripción</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>Texto doblado</td>
+        <td>Traducción para sordos</td>
+      </tr>
+    </table>
+    <br />
+
+    <form
+      id="formulario"
+      class="formulario"
+      action="contrasena.php
+      "
+      method="POST"
+    >
+      <input
+        type="text"
+        name="nombre"
+        placeholder="Usuario"
+        class="formularioP2"
+      />
+      <br />
+      <input
+        type="password"
+        name="contrasena"
+        placeholder="Contraseña"
+        class="formularioP2"
+      />
+      <br />
+      <button type="submit">
+        <span class="text">Entrar</span> <span class="shimmer"></span>
+      </button>
+      <br />
+      <br />
+      <a
+        href="http://localhost/proyecto/archivos/subpaginas/contacto/procesar.php"
+        ><input type="button" value="Regístrate" class="usuario"
+      /></a>
+      <br />
+      <input type="button" id="boton1" class="usuario" value="Más tarde" />
+      <br />
+      <a
+        href="subpaginas/contrasena/contrasena.html"
+        style="color: rgb(225, 129, 235)"
+        >Contraseña olvidada</a
+      >
+    </form>
+
+    <h1 class="gradient-text">Procesos de traducción</h1>
+    <p class="traduccionA">
+      A continuación, se muestran los procesos que se deben seguir para llevar a
+      cabo el proceso de traducción, si quieres leerlos, solo tienes que hacer
+      <i>click</i> en las imágenes.
+    </p>
+    <br />
+    <img
+      src="img/traduccionproceso.jpeg"
+      id="imagenp1"
+      width="300"
+      height="250"
+    />
+    <div class="proceso1" id="proceso1" style="display: none">
+      <h3
+        id="proceso1titulo"
+        style="display: block; text-decoration: underline"
+      >
+        Traducción
+      </h3>
+      <p>
+        El texto de una lengua de origen A se traduce a otra lengua de destino
+        B. Hoy en día, la mayoría de las agencias de traducción se apoyan en
+        herramientas que permiten agilizar el proceso (CAT tools).
+      </p>
+      <img
+        src="img/cattools.jpg"
+        id="cattools"
+        width="400"
+        height="200"
+        style="display: block"
+      />
+    </div>
+
+    <br />
+
+    <img src="img/edicion.jpg" id="imagenp2" width="300" height="300" />
+    <div class="proceso2" id="proceso2" style="display: none">
+      <h3
+        id="proceso2titulo"
+        style="display: block; text-decoration: underline"
+      >
+        Edición
+      </h3>
+      <p>
+        El siguiente proceso es la edición, durante el cual, los lingüistas
+        revisan la traducción inicial para buscar errores o hacer correcciones y
+        mejorar el producto final.
+      </p>
+    </div>
+
+    <br />
+
+    <img src="img/correccion.jpg" id="imagenp3" width="300" height="250" />
+    <div class="proceso3" id="proceso3" style="display: none">
+      <h3
+        id="proceso3titulo"
+        style="display: block; text-decoration: underline"
+      >
+        Corrección
+      </h3>
+      <p>
+        Esta etapa consiste en concentrarse en el formato y verificar que todos
+        los elementos estén en orden.
+      </p>
+    </div>
+  </body>
+  <br />
+  <br />
+  <footer>
+    <div class="reloj">
+      <p class="tiempo"></p>
+      <p class="fecha"></p>
+    </div>
+  </footer>
+  <script>
+    window.onload = function () {
+      const urlParams = new URLSearchParams(window.location.search);
+      const loggedIn = urlParams.get("loggedin");
+
+      if (loggedIn) {
+        document.getElementById("formulario").style.display = "none";
+        document.getElementById("menu").style.display = "block";
+      }
+    };
+  </script>
+</html>

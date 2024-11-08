@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Traducción Accesible</title>
+    <link rel="stylesheet" href="ta.css" />
+  </head>
+  <body>
+    <div>
+      <img
+        src="img/menu.png"
+        alt="menu icono"
+        width="20"
+        height="20"
+        class="menu"
+        id="menu"
+      />
+      <nav id="navegador" class="navegador">
+        <a href="#audiodescripcion">Audiodescripción</a>
+        <br />
+        <a href="#descripcion_sordos">Descripción para sordos</a>
+        <br />
+
+        <a
+          href="http://localhost\proyecto\archivos\subpaginas\subtitulacion\subtitulado.html"
+          >Subtitulación</a
+        >
+        <br />
+        <a
+          href="http://localhost/proyecto/archivos/subpaginas/doblaje/doblaje.html"
+          >Doblaje</a
+        >
+        <br />
+        <a
+          href="http://localhost/proyecto/archivos/subpaginas/tautomatica/tautomatica.html"
+          >Traducción Automática</a
+        >
+        <br />
+        <a
+          href="http://localhost/proyecto/archivos/subpaginas/consultas/consulta.html"
+          >Consultas</a
+        >
+        <br />
+        <a
+          href="http://localhost/proyecto/archivos/subpaginas/documentos/documentos.html"
+          >Documentos</a
+        >
+        <br />
+        <a
+          href="http://localhost/proyecto/archivos/subpaginas/busqueda/busqueda.html"
+          style="display: none"
+          >Búsqueda</a
+        >
+        <a
+          href="http://localhost/proyecto/archivos/Practica_2.html?loggedin=true"
+          >Volver</a
+        >
+      </nav>
+    </div>
+
+    <div class="tabanner"></div>
+    <h1>
+      <span class="left">Traducción</span>
+      <span class="right">Accesible</span>
+    </h1>
+    <br />
+    <div id="ta" class="ta">
+      <p>
+        La necesidad de una <b>traducción accesible</b> para todos surge por la
+        existencia de diversos colectivos de personas que presentan algún tipo
+        de disminución de sus capacidades cognitivas o la plena inexistencia de
+        esta: sordera, ceguera... En el ámbito de la traducción, destacan el
+        subtitulado, destinado a las personas con discapacidad auditiva o la
+        audiodescripción, que va destinada a aquellas personas con discapacidad
+        visual. A continuación, se detallan ambas dos.
+      </p>
+      <table border="2" class="tabla2">
+        <tr>
+          <th colspan="2">Tipos de Traducción Accesible</th>
+        </tr>
+        <tr>
+          <td>Subtitulado: personas sordas</td>
+          <td>
+            Modalidad que consiste en presentar un texto que ofrece una
+            descripción de lo que sucede en la pantalla. Se hace hincapié en lo
+            que se dice, cómo se dice y también en lo que se está escuchando.
+          </td>
+        </tr>
+        <tr>
+          <td>Audiodescripción</td>
+          <td>
+            Consiste en combinar información auditiva en los huecos de mensaje
+            de las producciones audiovisuales. Es decir, consiste en describir
+            lo que está sucediendo en las imágenes utilizando el sonido.
+          </td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="ejemplosTA">
+      <h2 id="audiodescripcion">Audiodescripción</h2>
+      <video src="img/isidro.mp4" controls width="500"></video>
+      <p>
+        En este primer ejemplo hemos podido ver lo que es una audiodescripción,
+        una técnica de doblaje que sirve para acercar el producto a las personas
+        ciegas o con visibilidad reducida. Para realizar este tipo de productos,
+        no solo ha que tener en cuenta el doblaje de los diálogos, sino que es
+        importante describir aquellos elementos importantes por el contexto.
+      </p>
+      <br />
+
+      <h2 id="descripcion_sordos">Descripción para sordos</h2>
+      <video src="img/descripsordos.mp4" controls width="500"></video>
+      <p>
+        En este segundo ejemplo, a diferencia del primero, no está destinado a
+        personas ciegas, sino a personas con dificultad auditiva. Para ello, se
+        escriben los subtítulos y, entre paréntesis, aquellos elementos,
+        expresiones, emociones... a destacar para que el espectador no pierda la
+        esencia del producto.
+      </p>
+    </div>
+    <br />
+    <div class="slider">
+      <figure>
+        <div class="slide">
+          <img src="img/aegisub.png" alt="" />
+        </div>
+        <div class="slide">
+          <img src="img/audiodescripcion.emocion.png" alt="" />
+        </div>
+        <div class="slide">
+          <img src="img/Subtitles.png" alt="" />
+        </div>
+        <div class="slide">
+          <img src="img/control-de-acceso.png" alt="" />
+        </div>
+      </figure>
+    </div>
+    <br />
+    <div class="tabanner"></div>
+  </body>
+
+  <script src="traaccesible.js"></script>
+</html>

@@ -1,0 +1,294 @@
+body {
+  background-color: #f4e0da;
+  height: auto;
+  width: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  padding-top: 50px;
+  animation-name: fadeIn;
+  animation-duration: 4s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.menu {
+  position: fixed; /* Menú fijo en la pantalla */
+  cursor: pointer;
+  z-index: 1000; /* Para que esté encima de otros elementos */
+  margin: 20vh 2vh;
+}
+
+nav {
+  background-color: #dfa18e;
+  width: 90px;
+  height: 300px;
+  padding: 16px 10px 12px 20px;
+  text-align: left;
+  display: none; /* Oculta el menú por defecto */
+  position: absolute; /* El menú es fijo */
+  left: 0;
+  animation-name: slide-in;
+  opacity: 0;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+  margin-top: 28vh;
+  position: fixed;
+}
+
+@keyframes slide-in {
+  from {
+    transform: translateX(-250px); /* Empieza fuera de la pantalla */
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0); /* Termina en su posición actual */
+    opacity: 0.9;
+  }
+}
+
+nav.mostrar {
+  display: block; /* Muestra el menú cuando se activa */
+}
+
+nav a {
+  color: black;
+  text-decoration: none;
+  display: block;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+}
+
+.doblar {
+  text-align: center;
+  color: #6a3120;
+  text-decoration: none;
+}
+
+.doblar a {
+  text-decoration: none;
+}
+
+span {
+  color: #852525;
+}
+
+.doblajeTitulo {
+  margin: auto;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #852525;
+  -webkit-transition: 1s linear;
+  transition: 1s linear;
+}
+.doblajeTitulo:hover {
+  -webkit-transform: perspective(150px) rotateX(45deg);
+  transform: perspective(150px) rotateX(45deg);
+}
+
+p {
+  text-align: justify;
+  padding: 1% 20% 3%;
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+  cursor: pointer;
+}
+
+#video1,
+#video2 {
+  text-align: left;
+  font-family: Arial Black;
+  font-weight: bold;
+  font-size: 20px;
+  text-align: center;
+  background: #202020;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow: 0px 3px 3px rgba(236, 81, 81, 0.4),
+    0px -1px 1px rgba(0, 0, 0, 0.3);
+}
+
+.videoDoblaje {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.video {
+  display: inline-block;
+
+  view-timeline-name: --video;
+  view-timeline-axis: block;
+
+  animation-timeline: --video;
+  animation-name: show;
+
+  animation-range: entry 25% cover 50%;
+  animation-fill-mode: both;
+}
+
+@keyframes show {
+  from {
+    opacity: 0;
+    scale: 25%;
+  }
+  to {
+    opacity: 1;
+    scale: 100%;
+  }
+}
+.dobladores {
+  text-align: center;
+}
+
+#dobladora1,
+#dobladora2,
+#dobladora3,
+#dobladora4,
+#doblador1,
+#doblador2,
+#doblador3,
+#doblador4 {
+  text-align: justify;
+  font-size: 18px;
+  font-family: "Times New Roman", Times, serif;
+  padding: 1% 20% 3%;
+}
+
+.opcionesH img,
+.opcionesM img {
+  display: block;
+  margin: 0 auto;
+  height: auto;
+}
+
+.container {
+  height: 100px;
+  background: #f2bfb0;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.content {
+  font-family: Arial;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.waves {
+  position: absolute;
+  bottom: 0;
+  height: 200px;
+  width: 100%;
+  overflow: hidden;
+}
+.wave {
+  position: absolute;
+  left: -180px;
+  bottom: 0;
+  width: 240%;
+  height: 200px;
+  background: url(https://static.platzi.com/media/files/waves_c8551f5d-ecf6-4a81-ae1d-f3a0ad55ba10.png)
+    center bottom no-repeat;
+  animation: 5s wave ease-in-out infinite alternate;
+}
+.wave.a {
+  background-position: 0 -854px;
+}
+.wave.b {
+  background-position: 0 -400px;
+  animation-delay: 0.6s;
+}
+.wave.c {
+  background-position: 0 60px;
+  animation-delay: 1.2s;
+}
+@keyframes wave {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(-30px, 40px);
+  }
+  100% {
+    transform: translate(30px, 0);
+  }
+}
+
+.contenedor {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+}
+
+.contenedor figure {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  cursor: pointer;
+  overflow: hidden;
+  border-radius: 6px;
+  box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.5);
+}
+
+.contenedor figure img {
+  width: 100%;
+  height: 100%;
+  transition: all 400ms ease-out;
+  will-change: transform;
+}
+
+.contenedor figure .capa {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(228, 194, 134, 0.7);
+  transition: all 400ms ease-out;
+  opacity: 0;
+  visibility: hidden;
+  text-align: center;
+}
+
+.contenedor figure:hover > .capa {
+  opacity: 1;
+  visibility: visible;
+}
+
+.contenedor figure:hover > img {
+  transform: scale(1.3);
+}
+
+.contenedor figure .capa h3 {
+  color: #fff;
+  font-weight: 400;
+  margin: 70px 0 15px;
+  transition: all 400ms ease-out;
+}
+
+.contenedor figure .capa p {
+  color: #fff;
+  font-size: 15px;
+  line-height: 1.5;
+  max-width: 220px;
+  margin: auto;
+}

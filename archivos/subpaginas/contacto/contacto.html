@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contacto</title>
+    <script>
+      window.location.href =
+        "http://localhost/proyecto/archivos/subpaginas/contacto/contacto.html";
+    </script>
+    <link rel="shortcut icon" href="img/contacto.png" />
+    <link rel="stylesheet" href="contacto.css" />
+  </head>
+  <body>
+    <a
+      class="navegador"
+      href="http://localhost/proyecto/archivos/Practica_2.html"
+      >Volver</a
+    >
+
+    <h1>Formulario</h1>
+    <p>
+      Te dejo un formulario aquí que puedes completar. En este formulario,
+      puedes ponerte en contacto conmigo.
+    </p>
+    <form
+      id="formulario"
+      class="formulario"
+      action="procesar.php"
+      method="POST"
+    >
+      <label for="nombre">Nombre: </label>
+      <input
+        type="text"
+        name="nombre"
+        placeholder="escribe tu nombre"
+        id="nombre"
+        required
+      />
+
+      <br /><br />
+
+      <label for="contrasena">Contraseña: </label>
+      <input
+        type="password"
+        name="contrasena"
+        placeholder="escribe tu contraseña"
+        id="contrasena"
+        required
+        autocomplete="current-password"
+      />
+
+      <br /><br />
+
+      <label for="nacionalidad">Nacionalidad: </label>
+      <select name="nacionalidad" required>
+        <option value="">Selecciona</option>
+        <option value="Europa">Europa</option>
+        <option value="Asia">Asia</option>
+        <option value="África">África</option>
+        <option value="Oceanía">Oceanía</option>
+        <option value="América del norte">América del norte</option>
+        <option value="América del sur">América del sur</option>
+      </select>
+      <br /><br />
+
+      <div class="genero">
+        <label for="genero">Género: </label>
+        <input type="radio" name="genero" value="F" />F
+        <input type="radio" name="genero" value="M" />M
+        <input type="radio" name="genero" value="Otro" />Otro
+      </div>
+      <br /><br />
+
+      <div id="radios">
+        <label for="modulo">Módulo:</label>
+        <input type="radio" id="radio1" name="modulo" value="DAM" />DAM
+        <input type="radio" id="radio2" name="modulo" value="DAW" />DAW
+        <input type="radio" id="radio3" name="modulo" value="Otro" />Otros
+      </div>
+      <br />
+
+      <label>Correo electrónico: </label>
+      <input
+        type="email"
+        name="email"
+        placeholder="correo@example.com"
+        required
+        autocomplete="email"
+      />
+
+      <br /><br />
+
+      <label>Número de teléfono: </label>
+      <input
+        type="text"
+        name="num_telf"
+        placeholder="escribe tu teléfono"
+        required
+      />
+      <br /><br />
+
+      <textarea
+        name="textoArea"
+        cols="45"
+        rows="10"
+        placeholder="Escribe un mensaje..."
+        required
+      ></textarea>
+      <br /><br />
+
+      <div class="contenedorBoton">
+        <input type="submit" id="miboton" class="miboton" value="ENVIAR" />
+      </div>
+    </form>
+
+    <audio src="img/sonidoMensaje.mp3" id="sonidoEnviar" preload="auto"></audio>
+
+    <br />
+    <footer>
+      <div class="bocadillo">
+        ¡Hola!
+        <a href="mailto:eveliagilparedes@hotmail.com">
+          <img class="fotoEmail" src="img/correo.png" width="20" height="20" />
+        </a>
+      </div>
+      <img
+        class="fotoYo"
+        src="img/eveiso-animacion (1).gif"
+        width="150"
+        height="150"
+      />
+      <a href="https://eveliagilparedes.wixsite.com/eveliagil" target="_blank"
+        ><img
+          class="fotoyoquieta"
+          src="img/yo.png"
+          style="display: none"
+          width="150"
+          height="150"
+        />
+      </a>
+      <br />
+      <div id="eve">Evelia Gil Paredes</div>
+    </footer>
+
+    <canvas id="confettiCanvas"></canvas>
+
+    <script src="contacto.js"></script>
+  </body>
+</html>
