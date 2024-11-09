@@ -33,7 +33,7 @@ h1 {
 nav {
   background-color: #dfa18e;
   width: 90px;
-  height: 300px;
+  height: 250px;
   padding: 16px 10px 12px 20px;
   text-align: left;
   display: none; /* Oculta el menú por defecto */

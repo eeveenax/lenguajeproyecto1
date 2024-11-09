@@ -17,7 +17,7 @@ body {
 nav {
   background-color: #df8bbd;
   width: 100px;
-  height: 220px;
+  height: 200px;
   padding: 16px;
   text-align: left;
   display: none; /* Oculta el menú por defecto */

@@ -10,11 +10,11 @@ body {
   height: 100vh; /* Ocupa toda la altura de la ventana */
   width: 100vw; /* Ocupa toda la anchura de la ventana */
   margin: 0; /* Eliminar márgenes por defecto */
-  background: black;
   overflow: hidden;
 }
 
 .old-page {
+  background: black;
   position: absolute;
   inset: 0;
   background: url("img/candado.png") center center no-repeat;
@@ -95,6 +95,7 @@ body {
 }
 
 .new-page {
+  background: rgba(195, 194, 194, 0.916);
   display: flex;
   flex-direction: column;
   justify-content: center; /* Centrar verticalmente los elementos dentro */
@@ -166,6 +167,7 @@ a {
 .botonBuscar:hover {
   background-color: #3d444c;
 }
+
 .botonBuscar:active {
   transform: scale(0.9);
 }

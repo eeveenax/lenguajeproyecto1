@@ -19,7 +19,7 @@ body {
 nav {
   background-color: #f4a4ed;
   width: 90px;
-  height: 220px;
+  height: 200px;
   padding: 16px 10px 12px 20px;
   text-align: left;
   display: none; /* Oculta el menú por defecto */
