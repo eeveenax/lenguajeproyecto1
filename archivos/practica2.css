@@ -579,46 +579,84 @@ button.active .text {
   border-color: rgb(172, 92, 163);
 }
 
-.proceso1 p,
-.proceso2 p,
-.proceso3 p {
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+.procesos {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 30px;
+  margin: 30px;
 }
 
-#proceso1 {
-  text-align: justify;
-  background-color: #b1abdc;
-  padding-bottom: 10px;
-  margin: auto;
-  width: 80%;
+.procesos .proceso1,
+.procesos .proceso2,
+.procesos .proceso3 {
+  position: relative;
+  max-width: 300px;
+  height: 215px;
+  background-color: rgb(225, 207, 219);
+  margin: 30px 10px;
+  padding: 20px 15px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+  transition: 0.3s ease-in-out;
+  border-radius: 15px;
 }
 
-#proceso1titulo {
+@media (max-width: 768px) {
+  .procesos {
+    gap: 80px; /* Añadir un gap de 20px entre los elementos */
+  }
+}
+
+.procesos .proceso1:hover,
+.procesos .proceso2:hover,
+.procesos .proceso3:hover {
+  height: 380px;
+}
+
+.procesos .proceso1 .imagen1,
+.procesos .proceso2 .imagen2,
+.procesos .proceso3 .imagen3 {
+  position: relative;
+  width: 260px;
+  height: 250px;
+  top: -40%;
+  left: 8px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  border-radius: 15px;
+}
+
+.imagen1 img,
+.imagen2 img,
+.imagen3 img {
+  max-width: 100%;
+  border-radius: 15px;
+}
+
+.procesos .proceso1 .proceso1Texto,
+.procesos .proceso2 .proceso2Texto,
+.procesos .proceso3 .proceso3Texto {
+  position: relative;
+  top: -140px;
+  padding: 10px 15px;
+  color: #111;
   text-align: center;
+
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.3s ease-in-out;
 }
 
-#cattools {
-  margin: auto;
-  display: block;
-  display: none;
-}
-
-#proceso2 {
-  text-align: justify;
-  background-color: #b1abdc;
-  width: 80%;
-}
-
-#proceso2titulo {
-  text-align: center;
-}
-
-#proceso3 {
-  text-align: center;
-  background-color: #b1abdc;
-  width: 80%;
-}
-
-#proceso3titulo {
-  text-align: center;
+.procesos .proceso1:hover .proceso1Texto,
+.procesos .proceso2:hover .proceso2Texto,
+.procesos .proceso3:hover .proceso3Texto {
+  margin-top: 20px;
+  visibility: visible;
+  opacity: 1;
+  transition-delay: 0.2s;
 }
