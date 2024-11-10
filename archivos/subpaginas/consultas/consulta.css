@@ -17,9 +17,9 @@ body {
 }
 
 nav {
-  background-color: #f4a4ed;
-  width: 90px;
-  height: 200px;
+  background-color: #da84e0;
+  width: 94px;
+  height: 230px;
   padding: 16px 10px 12px 20px;
   text-align: left;
   display: none; /* Oculta el menú por defecto */
@@ -98,7 +98,6 @@ span:hover {
   align-items: center;
   height: 30px;
   width: 70px;
-  font-size: 10px;
   border: none;
   color: white;
   cursor: pointer;

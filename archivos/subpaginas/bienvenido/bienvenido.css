@@ -30,19 +30,6 @@ body {
 
 .content {
   text-align: center;
-  animation-name: fade-out;
-  animation-duration: 2s;
-}
-@keyframes fade-out {
-  0% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0.5;
-  }
-  100% {
-    opacity: 0;
-  }
 }
 
 .title {

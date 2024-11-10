@@ -11,8 +11,8 @@ body {
   height: 100vh; /* Ocupa toda la altura de la ventana */
   width: 100vw; /* Ocupa toda la anchura de la ventana */
   margin: 0; /* Eliminar márgenes por defecto */
-  background: black;
   overflow: hidden;
+  background-color: #8d959d;
 }
 
 .old-page {
@@ -102,11 +102,14 @@ body {
 .new-page {
   display: flex;
   flex-direction: column;
-  justify-content: center; /* Centrar verticalmente los elementos dentro */
-  align-items: center; /* Centrar horizontalmente los elementos dentro */
+  justify-content: center;
+  align-items: center;
   animation: show var(--duration) cubic-bezier(0.975, -0.005, 0, 1.02);
   animation-fill-mode: forwards;
-  opacity: 0; /* Comienza invisible */
+  opacity: 0;
+  background-color: #8d959d;
+  width: 100%;
+  height: 100%;
 }
 
 @keyframes show {
@@ -119,8 +122,76 @@ body {
     opacity: 1; /* Al final completamente visible */
   }
 }
-.elementos {
+.fadein {
+  width: 100%;
+  height: 100%;
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  animation: fadein 3s ease-in;
+  animation-delay: 3s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.imagen {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-image: url(img/candado1.png);
+  background-repeat: no-repeat;
+  background-size: 100px 100px;
+  animation: moverImagen 10s linear infinite;
+}
+
+@keyframes moverImagen {
+  0% {
+    background-position: 0 0; /* Empieza en la esquina superior izquierda */
+  }
+  10% {
+    background-position: 20vw 5vh; /* Se mueve a una posición intermedia */
+  }
+  20% {
+    background-position: 40vw 30vh; /* Se mueve más hacia la derecha y hacia abajo */
+  }
+  30% {
+    background-position: 60vw 50vh; /* Continúa desplazándose hacia abajo a la derecha */
+  }
+  40% {
+    background-position: 80vw 70vh; /* Se mueve hacia la parte inferior derecha */
+  }
+  50% {
+    background-position: 50vw 80vh; /* Regresa al centro de la pantalla */
+  }
+  60% {
+    background-position: 20vw 90vh; /* Mueve hacia la parte inferior izquierda */
+  }
+  70% {
+    background-position: 10vw 60vh; /* Movimiento hacia la izquierda */
+  }
+  80% {
+    background-position: 30vw 40vh; /* Se mueve hacia el centro */
+  }
+  90% {
+    background-position: 60vw 20vh; /* Se mueve hacia la parte superior derecha */
+  }
+  100% {
+    background-position: 0 0; /* Regresa a la posición inicial */
+  }
+}
+.elementos {
+  display: inline-flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;

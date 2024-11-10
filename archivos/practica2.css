@@ -99,6 +99,11 @@ body {
   margin-top: 22vh;
 }
 
+@media screen and (max-width: 600px) {
+  .menu {
+    margin-top: 30vh; /* Adjust this value as needed */
+  }
+}
 nav {
   background-color: #a0dada;
   width: 200px;
@@ -122,6 +127,11 @@ nav {
   to {
     transform: translateX(0);
     opacity: 0.9;
+  }
+}
+@media screen and (max-width: 600px) {
+  nav {
+    margin-top: 35vh; /* Adjust this value as needed */
   }
 }
 
@@ -525,7 +535,7 @@ button.active .text {
   border: none;
   color: black;
   cursor: pointer;
-  border-radius: 20px;
+  border-radius: 0.66em;
   box-shadow: rgb(140, 30, 120);
   background-color: rgb(231, 167, 219);
   transition: box-shadow 0.3s ease-in-out;
