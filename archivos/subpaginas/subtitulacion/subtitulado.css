@@ -209,6 +209,7 @@ h1 {
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: rgb(218, 126, 208);
 }
 /* Asegura que las imágenes ocupen toda la celda */
 .caja img {
@@ -221,7 +222,6 @@ h1 {
 /* Ocultar el texto al principio */
 .caja p {
   position: absolute;
-  background-color: rgba(0, 0, 0, 0.6); /* Fondo oscuro con opacidad */
   color: white;
   opacity: 0; /* El texto es invisible por defecto */
   transition: opacity 0.3s ease; /* Transición suave para mostrar el texto */

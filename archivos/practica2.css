@@ -642,7 +642,7 @@ button.active .text {
 .procesos .proceso2 .proceso2Texto,
 .procesos .proceso3 .proceso3Texto {
   position: relative;
-  top: -140px;
+  top: -160px;
   padding: 10px 15px;
   color: #111;
   text-align: center;
