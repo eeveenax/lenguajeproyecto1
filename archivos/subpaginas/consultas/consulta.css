@@ -22,8 +22,8 @@ nav {
   height: 230px;
   padding: 16px 10px 12px 20px;
   text-align: left;
-  display: none; /* Oculta el menú por defecto */
-  position: absolute; /* El menú es fijo */
+  display: none;
+  position: absolute;
   left: 0;
   animation-name: slide-in;
   opacity: 0;
@@ -35,7 +35,7 @@ nav {
 
 @keyframes slide-in {
   from {
-    transform: translateX(-250px); /* Empieza fuera de la pantalla */
+    transform: translateX(-250px);
     opacity: 0;
   }
   to {

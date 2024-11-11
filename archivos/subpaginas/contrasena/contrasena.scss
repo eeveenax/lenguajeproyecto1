@@ -4,12 +4,12 @@
 
 body {
   display: flex;
-  flex-direction: column; /* Opción 1: Si deseas que los elementos se apilen verticalmente */
-  justify-content: center; /* Centrar verticalmente */
-  align-items: center; /* Centrar horizontalmente */
-  height: 100vh; /* Ocupa toda la altura de la ventana */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
   width: 100vw; /* Ocupa toda la anchura de la ventana */
-  margin: 0; /* Eliminar márgenes por defecto */
+  margin: 0;
   overflow: hidden;
   background-color: #8d959d;
 }

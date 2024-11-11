@@ -101,7 +101,7 @@ body {
 
 @media screen and (max-width: 600px) {
   .menu {
-    margin-top: 30vh; /* Adjust this value as needed */
+    margin-top: 30vh;
   }
 }
 nav {
@@ -131,7 +131,7 @@ nav {
 }
 @media screen and (max-width: 600px) {
   nav {
-    margin-top: 35vh; /* Adjust this value as needed */
+    margin-top: 35vh;
   }
 }
 
@@ -541,7 +541,7 @@ button.active .text {
   transition: box-shadow 0.3s ease-in-out;
 }
 .usuario:hover {
-  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3); /* Aumenta el desplazamiento y la opacidad de la sombra */
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
 }
 
 #sup {
@@ -608,7 +608,7 @@ button.active .text {
 
 @media (max-width: 768px) {
   .procesos {
-    gap: 80px; /* Añadir un gap de 20px entre los elementos */
+    gap: 80px;
   }
 }
 

@@ -6,6 +6,8 @@
     <title>Subtitulacion</title>
     <link rel="shortcut icon" href="img/traducir.png" />
     <link rel="stylesheet" href="subtitulado.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.7.0/dist/vanilla-tilt.min.js"></script>
   </head>
 
   <body>
@@ -65,23 +67,16 @@
       ver un vídeo subtitulado sobre un chico en silla de ruedas.
     </p>
     <br />
-    <div class="ejemplo1">
-      <a href="img/vanellope_video.mp4" target="_blank"
-        ><img
-          src="img/pngegg.png"
-          class="vanelopesub"
-          alt="imagen con video de subtitulacion"
-          width="300"
-          height="200"
-      /></a>
-
-      <img
+    <div class="wrapper">
+      <div class="card" data-tilt>
+        <a href="img/vanellope_video.mp4" target="_blank"></a>
+        <div class="bg"></div>
+      </div>
+      </div>
+     <div class="panelDisney"><img
         src="img/escudodisney.png"
         class="disney"
         id="disney"
-        width="90"
-        height="100"
-        style="cursor: help"
       />
 
       <div class="ocultar" id="info">
@@ -90,8 +85,11 @@
         Ralph decide tomar el asunto por sus propias y gigantes manos, y se
         lanza en un viaje a través de los distintos mundos y generaciones de
         videojuegos para demostrarle al mundo que él también puede ser un héroe.
-      </div>
-      <br />
+      </div></div>
+      <a href="img/vanellope_video.mp4" target="_blank"
+        ></a>
+
+      
       <br />
     </div>
     <p class="subParrafo">

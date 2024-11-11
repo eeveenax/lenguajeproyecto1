@@ -65,7 +65,9 @@ $conn->close();
   </head>
   <body>
   
-    <a href="http://localhost/proyecto/archivos/Practica_2.html">Volver</a>
+    <a href="http://localhost/proyecto/archivos/Practica_2.html"       
+   
+    >Volver</a>
 
     <h1>Formulario</h1>
     <p>

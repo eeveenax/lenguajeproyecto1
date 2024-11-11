@@ -17,6 +17,12 @@ body {
   cursor: pointer;
 }
 
+a {
+  text-decoration: none;
+  color: #1ba376;
+  font-size: 20px;
+}
+
 .contenedorBoton {
   align-items: center;
   text-align: center;
@@ -106,8 +112,8 @@ h1:hover {
   left: 0;
   width: 96vw;
   height: 100vh;
-  pointer-events: none; /* Prevent mouse events on canvas */
-  z-index: -1; /* Keep canvas behind other content */
+  pointer-events: none;
+  z-index: -1;
 }
 
 .miboton {

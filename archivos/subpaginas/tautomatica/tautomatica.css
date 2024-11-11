@@ -35,13 +35,13 @@ nav {
     opacity: 0;
   }
   to {
-    transform: translateX(0); /* Termina en su posición actual */
+    transform: translateX(0);
     opacity: 0.9;
   }
 }
 
 nav.mostrar {
-  display: block; /* Muestra el menú cuando se activa */
+  display: block;
 }
 
 nav a {
@@ -174,7 +174,7 @@ p,
     transform: rotate(0deg) scale(0.5);
   }
   100% {
-    left: 40%; /* Centrado horizontalmente */
+    left: 40%;
     opacity: 1;
     visibility: visible;
     transform: rotate(360deg) scale(1);

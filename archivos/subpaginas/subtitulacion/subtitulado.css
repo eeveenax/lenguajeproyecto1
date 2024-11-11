@@ -20,8 +20,8 @@ nav {
   height: 220px;
   padding: 16px;
   text-align: left;
-  display: none; /* Oculta el menú por defecto */
-  position: absolute; /* El menú es fijo */
+  display: none;
+  position: absolute;
   left: 0;
   animation-name: slide-in;
   opacity: 0;
@@ -33,11 +33,11 @@ nav {
 
 @keyframes slide-in {
   from {
-    transform: translateX(-250px); /* Empieza fuera de la pantalla */
+    transform: translateX(-250px);
     opacity: 0;
   }
   to {
-    transform: translateX(0); /* Termina en su posición actual */
+    transform: translateX(0);
     opacity: 0.9;
   }
 }
@@ -120,31 +120,36 @@ h1 {
   max-width: 700px;
 }
 
-.vanelopesub:hover {
-  transform: scale(1.05) rotate(10deg);
+.panelDisney {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .ocultar {
   display: none;
 }
 
+.disney {
+  height: 180px;
+  width: 150px;
+  cursor: help;
+}
+
 .volteado {
-  transform: rotateY(180deg); /* Rota la imagen 180 grados */
-  transition: transform 1s; /* Efecto suave */
+  transform: rotateY(180deg);
+  transition: transform 1s;
 }
 
 #info {
   background-color: #e38a8a;
-  padding: 30px;
-  position: absolute;
-  top: 100px;
-  left: 50%;
+  padding: 20px;
+  position: relative;
   z-index: 2;
   text-align: center;
-  margin-right: 40vh;
-  margin-top: -10vh;
-  width: 30%;
   max-width: 250px;
+  margin-top: 20px;
 }
 
 .mostrar {
@@ -187,10 +192,9 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 60%; /* Ajusta a la altura de la pantalla */
+  width: 60%;
 }
 
-/* Estilo de la caja donde se agrupan todos los elementos */
 .caja {
   display: grid;
   grid-template-columns: repeat(8, 1fr);
@@ -200,7 +204,6 @@ h1 {
   height: 700px;
 }
 
-/* Estilo para cada celda dentro de la caja */
 .caja div {
   position: relative;
   border-radius: 8px;
@@ -347,4 +350,44 @@ h1 {
     bottom: 40%; /* Ajusta la posición */
     font-size: 12px; /* Tamaño más pequeño */
   }
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 200px;
+  width: 100%;
+}
+
+.card {
+  position: relative;
+  height: 100px;
+  width: 200px;
+  padding: 40px;
+  transform-style: preserve-3d;
+}
+
+.card .bg {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: url("img/pngegg.png");
+  border-radius: 30px;
+  background-size: cover;
+  background-position: center;
+}
+
+.card a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1; /* Asegura que el enlace esté por encima de la imagen de fondo */
+  text-decoration: none; /* Elimina el subrayado del enlace */
+  cursor: pointer;
 }

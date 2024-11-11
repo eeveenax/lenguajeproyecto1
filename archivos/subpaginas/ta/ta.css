@@ -191,11 +191,11 @@ video {
 }
 
 .slider {
-  width: 60%; /* Hacer que el slider ocupe el 100% del contenedor */
-  max-width: 60%; /* Limitar el ancho máximo a 600px */
-  height: 400px; /* Mantener altura fija, o cambiar con media query si es necesario */
+  width: 60%;
+  max-width: 60%;
+  height: 400px;
   overflow: hidden;
-  position: relative; /* Para que los elementos hijos se posicionen correctamente */
+  position: relative;
 }
 
 figure {
