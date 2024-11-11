@@ -120,8 +120,8 @@ h1 {
   max-width: 700px;
 }
 
-#vanelopesub:hover {
-  transform: scale(1.05) rotate(5deg);
+.vanelopesub:hover {
+  transform: scale(1.05) rotate(10deg);
 }
 
 .ocultar {
