@@ -71,9 +71,24 @@ nav a {
 }
 
 .doblar {
+  margin-top: 60px;
   text-align: center;
-  color: #6a3120;
-  text-decoration: none;
+  font-family: Arial Black;
+  font-weight: bold;
+  font-size: 30px;
+  color: #8c2626;
+  text-shadow: 0 1px 0 #ddd, 0 2px 0 #ccc, 0 3px 0 #bbb, 0 4px 0 #aaa,
+    0 5px 0 #acacac, 0 6px 1px rgba(0, 0, 0, 0.1), 0 0 5px rgba(0, 0, 0, 0.1),
+    0 1px 3px rgba(0, 0, 0, 0.3), 0 3px 5px rgba(0, 0, 0, 0.2),
+    0 5px 10px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.2),
+    0 20px 20px rgba(0, 0, 0, 0.15);
+  -webkit-transition: 1s linear;
+  transition: 1s linear;
+}
+
+.doblar:hover {
+  -webkit-transform: perspective(150px) rotateX(45deg);
+  transform: perspective(150px) rotateX(45deg);
 }
 
 .doblar a {
@@ -95,6 +110,18 @@ span {
 .doblajeTitulo:hover {
   -webkit-transform: perspective(150px) rotateX(45deg);
   transform: perspective(150px) rotateX(45deg);
+}
+
+h3 {
+  text-align: center;
+  font-family: Comic Sans MS;
+  font-weight: bold;
+  font-size: 30px;
+  color: #e38787;
+  text-shadow: -1px 0 #414d68, 0 1px #414d68, 1px 0 #414d68, 0 -1px #414d68,
+    -2px 2px 0 #414d68, 2px 2px 0 #414d68, 1px 1px #414d68, 2px 2px #414d68,
+    3px 3px #414d68, 4px 4px #414d68, 5px 5px #414d68, 6px 6px #414d68,
+    7px 7px #414d68, 8px 8px #414d68, 9px 9px #414d68;
 }
 
 p {
@@ -172,6 +199,7 @@ p {
 
 .opcionesH img,
 .opcionesM img {
+  width: 300px;
   display: block;
   margin: 0 auto;
   height: auto;
