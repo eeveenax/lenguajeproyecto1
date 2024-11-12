@@ -320,3 +320,139 @@ p {
   max-width: 220px;
   margin: auto;
 }
+
+/*Imágenes con movimiento*/
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 200px;
+  width: 100%;
+}
+
+.card {
+  position: relative;
+  height: 250px;
+  width: 200px;
+  padding: 40px;
+  transform-style: preserve-3d;
+}
+
+/*1 Ricardo Solans*/
+
+.card .bg1 {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: url("img/solans.jpg");
+  border-radius: 30px;
+  background-size: cover;
+  background-position: center;
+}
+
+/*Roger*/
+
+.card .bg2 {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: url("img/roger_pera.jpg");
+  border-radius: 30px;
+  background-size: cover;
+  background-position: center;
+}
+
+/*Pepe Mediavilla*/
+
+.card .bg3 {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: url("img/pepe.jpg");
+  border-radius: 30px;
+  background-size: cover;
+  background-position: center;
+}
+
+/*JL Gil*/
+
+.card .bg4 {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: url("img/JLGil.jpg");
+  border-radius: 30px;
+  background-size: cover;
+  background-position: center;
+}
+
+/*Nuria Trifol*/
+
+.card .bg5 {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: url("img/nuria.jpg");
+  border-radius: 30px;
+  background-size: cover;
+  background-position: center;
+}
+/*Mercedes*/
+
+.card .bg6 {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: url("img/mercedes.jpg");
+  border-radius: 30px;
+  background-size: cover;
+  background-position: center;
+}
+
+/*Lucia*/
+
+.card .bg7 {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: url("img/lucia.jpeg");
+  border-radius: 30px;
+  background-size: cover;
+  background-position: center;
+}
+
+/*M Jenner*/
+
+.card .bg8 {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: url("img/jenner.jpg");
+  border-radius: 30px;
+  background-size: cover;
+  background-position: center;
+}
