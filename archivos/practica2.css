@@ -139,7 +139,7 @@ nav a {
   text-decoration: none;
   padding: 10px 15px;
   display: block;
-  font-family: Arial, sans-serif;
+  font-family: "Times New Roman", Times, serif;
   font-size: 16px;
   color: black;
 }
@@ -201,14 +201,14 @@ p {
   text-align: justify;
   padding: 1% 20% 3%;
   font-size: 16px;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Times New Roman", Times, serif;
 }
 
 .traduccionA {
   text-align: justify;
   padding: 1% 20% 3%;
   font-size: 16px;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Times New Roman", Times, serif;
 }
 
 .container {
@@ -285,21 +285,24 @@ p {
   }
 }
 
-.tablaUno {
-  border-color: #1e6da5;
-  text-align: center;
-  align-items: center;
-  justify-items: center;
-  padding: 6px;
-  font-family: Arial, Helvetica, sans-serif;
-  cursor: pointer;
+.menu {
+  margin-top: 60px;
+}
+
+#sup {
+  margin: 30%;
+  color: rgb(196, 25, 136);
+  font-size: larger;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 30px;
 }
 
 li,
 ol {
   align-items: center;
   text-align: justify;
-  font-size: 17px;
+  font-size: 22px;
+  font-family: "Times New Roman", Times, serif;
 }
 
 th {
@@ -309,6 +312,16 @@ th {
 
 th:hover {
   color: #ae266a;
+}
+
+.tablaUno {
+  border-color: #1e6da5;
+  text-align: center;
+  align-items: center;
+  justify-items: center;
+  padding: 6px;
+  font-family: "Times New Roman", Times, serif;
+  cursor: pointer;
 }
 
 a:link {
@@ -544,14 +557,6 @@ button.active .text {
   box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
 }
 
-#sup {
-  margin: 30%;
-  color: rgb(196, 25, 136);
-  font-size: larger;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 22px;
-}
-
 .reloj {
   font-family: "Times New Roman", Times, serif;
   color: #641d40;
@@ -581,13 +586,13 @@ button.active .text {
 
 .procesos {
   position: relative;
-  width: 100%;
+  width: 90%;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
   padding: 30px;
-  margin: 30px;
+  margin: 50px;
 }
 
 .procesos .proceso1,
@@ -642,7 +647,7 @@ button.active .text {
 .procesos .proceso2 .proceso2Texto,
 .procesos .proceso3 .proceso3Texto {
   position: relative;
-  top: -160px;
+  top: -180px;
   padding: 10px 15px;
   color: #111;
   text-align: center;
