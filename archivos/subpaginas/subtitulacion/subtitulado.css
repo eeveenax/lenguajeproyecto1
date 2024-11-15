@@ -313,7 +313,7 @@ h1 {
   font-size: 30px;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 800px) {
   .parrafo1,
   .parrafo2,
   .parrafo3,
