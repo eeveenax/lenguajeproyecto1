@@ -24,7 +24,7 @@ h1 {
 }
 
 .menu {
-  position: fixed;
+  position: absolute;
   cursor: pointer;
   z-index: 1000;
   margin: 20vh 2vh;
@@ -66,7 +66,7 @@ nav a {
   color: black;
   text-decoration: none;
   display: block;
-  font-family: Arial, sans-serif;
+  font-family: "Times New Roman", Times, serif;
   font-size: 16px;
 }
 
@@ -100,18 +100,23 @@ span {
 }
 
 .doblajeTitulo {
+  font-size: 80px;
   margin: auto;
   text-align: center;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Times New Roman", Times, serif;
   color: #852525;
   -webkit-transition: 1s linear;
   transition: 1s linear;
+  text-shadow: 0 1px 0 #ddd, 0 2px 0 #ccc, 0 3px 0 #bbb, 0 4px 0 #aaa,
+    0 5px 0 #acacac, 0 6px 1px rgba(0, 0, 0, 0.1), 0 0 5px rgba(0, 0, 0, 0.1),
+    0 1px 3px rgba(0, 0, 0, 0.3), 0 3px 5px rgba(0, 0, 0, 0.2),
+    0 5px 10px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.2),
+    0 20px 20px rgba(0, 0, 0, 0.15);
 }
 .doblajeTitulo:hover {
   -webkit-transform: perspective(150px) rotateX(45deg);
   transform: perspective(150px) rotateX(45deg);
 }
-
 h3 {
   text-align: center;
   font-family: Comic Sans MS;
@@ -123,21 +128,20 @@ h3 {
     3px 3px #414d68, 4px 4px #414d68, 5px 5px #414d68, 6px 6px #414d68,
     7px 7px #414d68, 8px 8px #414d68, 9px 9px #414d68;
 }
-
 p {
   text-align: justify;
   padding: 1% 20% 3%;
-  font-size: 16px;
-  font-family: Arial, Helvetica, sans-serif;
-  cursor: pointer;
+  font-size: 20px;
+  font-family: "Times New Roman", Times, serif;
+  margin-top: 50px;
 }
 
 #video1,
 #video2 {
-  text-align: left;
+  margin: 40px;
   font-family: Arial Black;
   font-weight: bold;
-  font-size: 30px;
+  font-size: 40px;
   text-align: center;
   background: #202020;
   -webkit-background-clip: text;
@@ -149,21 +153,27 @@ p {
 }
 
 .videoDoblaje {
+  /*Disposición del vídeo */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  cursor: pointer;
 }
 
 .video {
-  display: inline-block;
+  display: flex;
+  flex-wrap: wrap;
+  width: 900px;
+
+  /*Animación del vídeo del vídeo */
 
   view-timeline-name: --video;
   view-timeline-axis: block;
 
   animation-timeline: --video;
   animation-name: show;
+
+  /*Permite que el usuario vea el vídeo cuando entra al 25% en pantalla*/
 
   animation-range: entry 25% cover 50%;
   animation-fill-mode: both;
@@ -179,8 +189,102 @@ p {
     scale: 100%;
   }
 }
-.dobladores {
+
+@media (max-width: 1000px) {
+  .videoDoblaje {
+    /*Disposición del vídeo */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  .video {
+    display: flex;
+    flex-wrap: wrap;
+    width: 500px;
+    max-width: 500px;
+    /*Animación del vídeo del vídeo */
+
+    view-timeline-name: --video;
+    view-timeline-axis: block;
+
+    animation-timeline: --video;
+    animation-name: show;
+
+    /*Permite que el usuario vea el vídeo cuando entra al 25% en pantalla*/
+
+    animation-range: entry 25% cover 50%;
+    animation-fill-mode: both;
+  }
+
+  @keyframes show {
+    from {
+      opacity: 0;
+      scale: 25%;
+    }
+    to {
+      opacity: 1;
+      scale: 100%;
+    }
+  }
+  p {
+    text-align: justify;
+    padding: 1% 5% 3%;
+    font-size: 20px;
+    font-family: "Times New Roman", Times, serif;
+    margin-top: 50px;
+  }
+}
+
+/*Texto y enlace*/
+
+.doblar {
+  flex-wrap: wrap;
+  margin-top: 120px;
   text-align: center;
+  color: #6a3120;
+  font-size: 60px;
+  text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2), 5px 5px 7px rgba(0, 0, 0, 0.2),
+    7px 7px 9px rgba(0, 0, 0, 0.2), 9px 9px 11px rgba(243, 5, 5, 0.4),
+    29px 29px 31px rgba(0, 0, 0, 0.2), 31px 31px 33px rgba(0, 0, 0, 0.2);
+  font-family: "Lobster";
+}
+
+.doblar:hover {
+  animation: brillar 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes brillar {
+  to {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #672916,
+      0 0 70px #b5411d, 0 0 80px #86331a, 0 0 100px #a12e0b, 0 0 150px #ff5722;
+  }
+  from {
+    filter: brightness(110%);
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #ff5722,
+      0 0 35px #ff5722, 0 0 40px #ff5722, 0 0 50px #ff5722, 0 0 75px #ff5722;
+  }
+}
+
+.doblar span {
+  cursor: help;
+  color: #852525;
+  font-size: 60px;
+  font-family: "Lobster";
+}
+
+.doblar a {
+  text-decoration: none;
+  font-size: 30px;
+}
+
+.dobladores {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 #dobladora1,
@@ -195,6 +299,28 @@ p {
   font-size: 18px;
   font-family: "Times New Roman", Times, serif;
   padding: 1% 20% 3%;
+}
+
+.opcionesH,
+.opcionesM {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.seleccionarH,
+.seleccionarM {
+  color: rgb(148, 85, 25);
+  padding: 3px;
+  border: 2px solid rgb(152, 91, 34);
+  border-radius: 5px;
+  font-size: 16px;
+  background-color: #fff;
+  text-align: center;
+  appearance: none;
+  width: 100px;
+  margin-top: 30px;
 }
 
 .opcionesH img,
@@ -215,7 +341,7 @@ p {
   overflow: hidden;
 }
 .content {
-  font-family: Arial;
+  font-family: "Times New Roman", Times, serif;
   text-align: center;
   color: rgba(255, 255, 255, 0.8);
 }

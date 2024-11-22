@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Lobster");
+
 :root {
   --glow-hue: 222deg;
   --shadow-hue: 180deg;
@@ -96,14 +98,9 @@ body {
   position: fixed;
   left: 10px;
   cursor: pointer;
-  margin-top: 22vh;
+  margin-top: 20vh;
 }
 
-@media screen and (max-width: 600px) {
-  .menu {
-    margin-top: 30vh;
-  }
-}
 nav {
   background-color: #a0dada;
   width: 200px;
@@ -112,11 +109,12 @@ nav {
   display: none;
   position: fixed;
   left: 0;
-  margin-top: 26vh;
+  margin-top: 24vh;
   animation-name: slide-in;
   opacity: 0;
   animation-duration: 3s;
   animation-fill-mode: forwards;
+  font-size: 16px;
 }
 
 @keyframes slide-in {
@@ -129,18 +127,13 @@ nav {
     opacity: 0.9;
   }
 }
-@media screen and (max-width: 600px) {
-  nav {
-    margin-top: 35vh;
-  }
-}
 
 nav a {
   text-decoration: none;
   padding: 10px 15px;
   display: block;
   font-family: "Times New Roman", Times, serif;
-  font-size: 16px;
+  font-size: 18px;
   color: black;
 }
 
@@ -153,7 +146,8 @@ nav .mostrar {
 }
 
 #bannerTexto {
-  font-size: 40px;
+  font-family: Lobster;
+  font-size: 60px;
   margin: auto;
   color: #33359a;
   text-align: center;
@@ -207,7 +201,7 @@ p {
 .traduccionA {
   text-align: justify;
   padding: 1% 20% 3%;
-  font-size: 16px;
+  font-size: 20px;
   font-family: "Times New Roman", Times, serif;
 }
 
@@ -285,12 +279,15 @@ p {
   }
 }
 
-.menu {
-  margin-top: 60px;
+.indice {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 #sup {
-  margin: 30%;
+  margin-top: 30%;
   color: rgb(196, 25, 136);
   font-size: larger;
   font-family: "Times New Roman", Times, serif;
@@ -322,6 +319,7 @@ th:hover {
   padding: 6px;
   font-family: "Times New Roman", Times, serif;
   cursor: pointer;
+  font-size: 26px;
 }
 
 a:link {
@@ -341,6 +339,7 @@ h1 {
   align-items: center;
   width: 100%;
   max-width: 50%;
+  margin-top: 60px;
   color: transparent;
   background: conic-gradient(
     #7f77d1 10%,
@@ -664,4 +663,14 @@ button.active .text {
   visibility: visible;
   opacity: 1;
   transition-delay: 0.2s;
+}
+
+@media (max-width: 700px) {
+  .menu {
+    margin-top: 35vh;
+  }
+
+  .tablaUno {
+    font-size: 20px;
+  }
 }
