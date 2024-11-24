@@ -610,12 +610,6 @@ button.active .text {
   border-radius: 15px;
 }
 
-@media (max-width: 768px) {
-  .procesos {
-    gap: 80px;
-  }
-}
-
 .procesos .proceso1:hover,
 .procesos .proceso2:hover,
 .procesos .proceso3:hover {
@@ -665,12 +659,20 @@ button.active .text {
   transition-delay: 0.2s;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 1000px) {
+  .procesos {
+    gap: 80px;
+  }
+
   .menu {
-    margin-top: 35vh;
+    margin-top: 30vh;
   }
 
   .tablaUno {
     font-size: 20px;
+  }
+
+  nav {
+    margin-top: 34vh;
   }
 }

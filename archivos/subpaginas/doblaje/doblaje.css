@@ -164,6 +164,7 @@ p {
   display: flex;
   flex-wrap: wrap;
   width: 900px;
+  border-radius: 10%;
 
   /*Animación del vídeo del vídeo */
 
@@ -203,7 +204,7 @@ p {
   .video {
     display: flex;
     flex-wrap: wrap;
-    width: 500px;
+    width: 450px;
     max-width: 500px;
     /*Animación del vídeo del vídeo */
 
@@ -391,13 +392,13 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 50vh;
+  height: 400px;
 }
 
 .contenedor figure {
   position: relative;
-  width: 300px;
-  height: 300px;
+  width: 400px;
+  height: 400px;
   cursor: pointer;
   overflow: hidden;
   border-radius: 6px;

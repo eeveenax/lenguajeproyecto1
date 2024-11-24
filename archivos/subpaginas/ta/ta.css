@@ -55,66 +55,98 @@ nav a {
   font-size: 16px;
 }
 
+/* Estilo del banner superior */
+
 .tabanner {
-  height: 2cm;
-  width: 100%;
+  height: 2cm; /* Altura fija */
+  width: 100%; /* Ancho completo */
   background-color: #72d498;
 }
 
+/* Estilo de título principal */
 h1 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
+  display: flex; /* Usa flexbox para alinear los elementos */
+  justify-content: center; /* Centra el contenido */
+  align-items: center; /* Alinea los elementos verticalmente */
+  overflow: hidden; /* Evita el desbordamiento de texto */
   color: rgb(32, 54, 32);
   width: 500px;
+  font-size: 40px;
 }
+
+/* Animación de aparición para los textos de izquierda y derecha */
 
 .left,
 .right {
   position: relative;
   opacity: 0;
-  animation: slideIn 5s forwards;
+  animation: slideIn 5s forwards; /* Aplica la animación de entrada */
 }
 
 .left {
-  animation-name: slideInLeft;
+  animation-name: slideInLeft; /* Animación para el lado izquierdo */
 }
 
 .right {
-  animation-name: slideInRight;
+  animation-name: slideInRight; /* Animación para el lado derecho */
 }
+
+/* Animación de deslizamiento hacia la izquierda */
 
 @keyframes slideInLeft {
   0% {
-    transform: translateX(-100%);
+    transform: translateX(
+      -100%
+    ); /* Comienza fuera de la pantalla a la izquierda */
     opacity: 0;
   }
   100% {
-    transform: translateX(-8%);
+    transform: translateX(-8%); /* Llega a la posición deseada */
     opacity: 1;
   }
 }
+
+/* Animación de deslizamiento hacia la derecha */
 
 @keyframes slideInRight {
   0% {
-    transform: translateX(100%);
+    transform: translateX(
+      100%
+    ); /* Comienza fuera de la pantalla a la derecha */
     opacity: 0;
   }
   100% {
-    transform: translateX(0);
+    transform: translateX(0); /* Llega a su posición final */
     opacity: 1;
   }
 }
 
-.tabla2 {
+/* Estilos para la sección de texto principal */
+.ta {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: justify;
+  padding: 1% 20% 3%;
+  font-size: 20px;
+  font-family: "Times New Roman", Times, serif;
   width: 80%;
+}
+
+/* Estilos de la tabla */
+.tabla2 {
+  width: 60%;
   max-width: 80%;
   height: 100%;
   border-color: #29425d;
-  text-align: center;
+  text-align: center; /* Alineación de texto al centro */
   margin-top: 20px;
+  background-image: url(img/tablaimagen.jpg);
+  background-size: contain;
 }
+
+/* Estilo para las celdas de la tabla */
 th {
   color: #0a3e76;
   border: none;
@@ -123,47 +155,39 @@ th {
 td {
   color: black;
   border-color: #0a3e76;
+  font-weight: bolder;
 }
 
-.ta {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: justify;
-  padding: 1% 20% 3%;
-  font-size: 16px;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-.ejemplosTA {
-  text-align: center;
-  font-size: 16px;
-  font-family: Arial, Helvetica, sans-serif;
-  color: #0f632f;
-}
+/* Estilos para los títulos de los ejemplos con animación */
 
 #audiodescripcion,
 #descripcion_sordos {
   text-decoration: underline;
-  animation: gelatine 5s infinite;
+  animation: gelatine 5s infinite; /* Aplica la animación gelatina */
   margin: 40px;
+  font-size: 40px;
+  color: #0f632f;
 }
+
+/* Animación de tipo gelatina para los títulos */
+
 @keyframes gelatine {
   from,
   to {
-    transform: scale(1, 1);
+    transform: scale(1, 1); /* Mantiene el tamaño normal */
   }
   25% {
-    transform: scale(0.9, 1.1);
+    transform: scale(0.9, 1.1); /* Efecto de contracción */
   }
   50% {
-    transform: scale(1.1, 0.9);
+    transform: scale(1.1, 0.9); /* Efecto de expansión */
   }
   75% {
-    transform: scale(0.95, 1.05);
+    transform: scale(0.95, 1.05); /* Efecto de rebote */
   }
 }
+
+/* Estilo para la sección de ejemplos de traducción accesible */
 
 .ejemplosTA {
   display: flex;
@@ -172,93 +196,150 @@ td {
   align-items: center;
   margin-left: 5%;
   margin-right: 5%;
-  max-width: 90%;
+  max-width: 100%;
 }
 
+/* Estilo para los párrafos */
 p {
   width: 60%;
   max-width: 60%;
   color: black;
   text-align: justify;
+  font-size: 20px;
+  font-family: "Times New Roman", Times, serif;
 }
+
+/* Estilo para los videos */
 
 video {
   display: flex;
-  flex-wrap: wrap;
   width: 60%;
   max-width: 100%;
   margin: 20px;
+  left: 50%;
+  border-radius: 20px;
+  view-timeline-name: --video;
+  view-timeline-axis: block;
+
+  animation-timeline: --video;
+  animation-name: show;
+
+  animation-range: entry 25% cover 50%;
+  animation-fill-mode: both;
 }
 
+@keyframes show {
+  from {
+    opacity: 0;
+    scale: 25%;
+  }
+  to {
+    opacity: 1;
+    scale: 100%;
+  }
+}
+
+/* Animación de aparición de los videos */
+
+@keyframes show {
+  from {
+    opacity: 0;
+    scale: 25%; /* Comienza pequeño */
+  }
+  to {
+    opacity: 1;
+    scale: 100%; /* Se expande a su tamaño original */
+  }
+}
+
+/* Estilos para el slider de imágenes */
+
 .slider {
-  width: 60%;
-  max-width: 60%;
+  width: 55%;
+  max-width: 55%;
   height: 400px;
   overflow: hidden;
   position: relative;
 }
 
+/* Estilo para el contenedor de imágenes en el slider */
+
 figure {
   position: relative;
   left: 0;
-  width: 400%; /* 4 imágenes, cada una ocupa el 25% */
-  animation: slide 10s infinite; /* Nombre de la animación y duración */
-  margin: 0; /* Elimina el margen por defecto del figure */
+  width: 400%;
+  animation: slide 10s infinite;
+  margin: 0;
 }
+
+/* Estilos para cada slide */
 
 .slide {
   position: relative;
-  width: 25%; /* Cada slide ocupa el 25% del total */
-  float: left; /* Permite que los slides se alineen horizontalmente */
+  width: 25%;
+  float: left;
 }
+
+/* Estilo para las imágenes dentro del slider */
 
 .slide img {
-  width: 100%; /* Asegura que la imagen ocupe el 100% del contenedor */
-  height: 100%; /* Asegura que la imagen ocupe la altura del contenedor */
-  object-fit: contain; /* O usa 'contain' si prefieres ver la imagen completa sin recortes */
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
 }
 
+/* Animación para el deslizamiento de imágenes */
 @keyframes slide {
   0% {
     left: 0;
-  }
-  10% {
-    left: 0;
-  }
-  20% {
+  } /* Inicia en la posición original */
+  25% {
     left: -100%;
-  }
-  30% {
-    left: -100%;
-  }
-  45% {
+  } /* Se mueve la primera imagen fuera de la vista */
+  40% {
     left: -200%;
-  }
-  50% {
-    left: -200%;
-  }
-  60% {
+  } /* La segunda imagen desaparece y entra tla tercera*/
+  55% {
     left: -300%;
-  }
+  } /* La tercera imagen desaparece */
   65% {
-    left: -300%;
-  }
+    left: -200%;
+  } /* Vuelve a la segunda imagen */
   75% {
-    left: -200%;
-  }
-  78% {
-    left: -200%;
-  }
-  80% {
     left: -100%;
-  }
+  } /* Vuelve a la primera imagen */
   90% {
-    left: -100%;
-  }
-  95% {
     left: 0;
-  }
+  } /* Vuelve a la posición inicial */
   100% {
     left: 0;
+  } /* Regresa a la posición inicial */
+}
+
+@media (max-width: 1000px) {
+  .menu {
+    margin-top: 30vh;
+  }
+
+  nav {
+    margin-top: 36vh;
+  }
+  video {
+    width: 500px;
+    max-width: 500px;
+  }
+
+  #audiodescripcion,
+  #descripcion_sordos {
+    font-size: 30px;
+  }
+
+  .slider {
+    width: 100%; /* Ocupa todo el ancho disponible */
+    height: 200px; /* Ajusta la altura al contenedor */
+  }
+
+  .slide img {
+    height: 200px; /* Cambia la altura de las imágenes a 200 píxeles*/
   }
 }
