@@ -11,6 +11,7 @@ body {
   color: rgb(80, 30, 67);
 }
 
+/* */
 .formulario {
   background-color: rgb(216, 128, 157);
   padding: 20px;
@@ -54,11 +55,13 @@ a {
   }
 }
 
+/* */
 .fotoEmail {
   align-items: center;
   margin: 1px 0 0 12px;
 }
 
+/* */
 .fotoYo {
   animation-delay: 0s;
   animation-duration: 14s;
@@ -78,6 +81,7 @@ a {
   }
 }
 
+/* */
 .fotoyoquieta {
   margin: -20px -40px 0 -48px;
   cursor: pointer;
@@ -106,6 +110,7 @@ h1:hover {
   color: rgb(168, 53, 168);
 }
 
+/* */
 #confettiCanvas {
   position: absolute;
   top: 0;
@@ -116,6 +121,7 @@ h1:hover {
   z-index: -1;
 }
 
+/* */
 .miboton {
   color: 2px solid rgb(202, 116, 169);
   border: 2px solid rgb(216, 2, 134);

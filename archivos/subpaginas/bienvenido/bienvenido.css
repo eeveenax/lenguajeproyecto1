@@ -21,6 +21,7 @@ body {
   font-family: "Inter", "DM Sans", Arial, sans-serif;
 }
 
+/*Pseudoelementos antes y después*/
 *,
 *::before,
 *::after {

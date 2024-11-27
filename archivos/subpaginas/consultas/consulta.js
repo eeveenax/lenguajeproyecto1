@@ -1,3 +1,5 @@
+/* */
+
 const menu = document.getElementById("menu");
 const navegador = document.getElementById("navegador");
 const miboton = document.getElementById("miboton");
@@ -7,6 +9,7 @@ menu.addEventListener("click", function () {
   navegador.classList.toggle("mostrar");
 });
 
+/* */
 miboton.addEventListener("click", function () {
   // Validar el formulario
   const nombre = document.getElementById("usuarioNombre").value.trim();
@@ -16,7 +19,7 @@ miboton.addEventListener("click", function () {
     alert("Por favor, completa todos los campos del formulario.");
     return;
   }
-
+  /* */
   alert("Enviado correctamente");
 
   // Usar setTimeout para permitir al navegador procesar otros eventos
@@ -25,6 +28,7 @@ miboton.addEventListener("click", function () {
   }, 0);
 });
 
+/* */
 botonBuscar.addEventListener("click", async function () {
   const nombreBuscar = document.querySelector("#texto1").value;
   if (!nombreBuscar) {
@@ -32,6 +36,7 @@ botonBuscar.addEventListener("click", async function () {
     return;
   }
 
+  /* */
   try {
     const response = await fetch("busqueda.php", {
       method: "POST",
@@ -45,6 +50,7 @@ botonBuscar.addEventListener("click", async function () {
       throw new Error("Error en la respuesta del servidor.");
     }
 
+    /* */
     const data = await response.text();
     document.getElementById("textoinfo").innerHTML = data;
   } catch (error) {

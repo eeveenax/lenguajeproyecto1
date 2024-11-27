@@ -52,12 +52,14 @@ nav a {
   font-size: 16px;
 }
 
+/* */
 .tAutomatico {
   padding: 30px;
   margin: 0;
   background-color: rgb(164, 70, 30, 0.3);
 }
 
+/* */
 .tAutomaticoTitulo {
   text-align: center;
   font-family: "Times New Roman", Times, serif;
@@ -79,6 +81,7 @@ nav a {
   }
 }
 
+/* */
 p,
 #googleH,
 #deeplH,
@@ -89,6 +92,7 @@ p,
   padding: 3% 20% 3%;
 }
 
+/* */
 #traductoresAuto {
   margin: auto;
   text-align: center;
@@ -97,6 +101,7 @@ p,
   margin-top: 1vh;
 }
 
+/* */
 #google,
 #deepl,
 #pons {
@@ -108,6 +113,7 @@ p,
   cursor: pointer;
 }
 
+/* */
 @keyframes saltos {
   0% {
     transform: translateY(0) translateX(-100vh);
@@ -160,6 +166,7 @@ p,
   }
 }
 
+/* */
 .trueda {
   display: block;
   position: absolute;
@@ -182,6 +189,7 @@ p,
   }
 }
 
+/* */
 #corazon {
   display: block;
   animation: pulse 6s infinite ease-in;
@@ -208,6 +216,7 @@ p,
   }
 }
 
+/* */
 #mensaje {
   font-size: 20px;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
@@ -227,6 +236,7 @@ p,
   text-decoration: dashed;
 }
 
+/* */
 @keyframes parpadear {
   0% {
     opacity: 1;

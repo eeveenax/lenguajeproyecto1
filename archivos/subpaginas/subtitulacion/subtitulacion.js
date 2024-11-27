@@ -1,17 +1,22 @@
+/* */
+
 const menu = document.getElementById("menu");
 const navegador = document.getElementById("navegador");
 const disney = document.getElementById("disney");
 const info = document.getElementById("info");
 
+/* */
 menu.addEventListener("click", function () {
   navegador.classList.toggle("mostrar");
 });
 
+/* */
 disney.addEventListener("click", function () {
   disney.classList.toggle("volteado");
   info.classList.toggle("mostrar");
 });
 
+/* */
 $(document).ready(function () {
   // Aplica VanillaTilt en todos los elementos con la clase '.card'
   $(".card").each(function () {

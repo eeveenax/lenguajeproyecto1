@@ -95,7 +95,7 @@ body {
 }
 
 .menu {
-  position: fixed;
+  position: fixed; /*Para que se quede fijo y siempre esté en pantalla*/
   left: 10px;
   cursor: pointer;
   margin-top: 20vh;
@@ -137,6 +137,7 @@ nav a {
   color: black;
 }
 
+/*Para que el menú oculto se muestre*/
 nav .mostrar {
   display: block;
 }
@@ -198,6 +199,7 @@ p {
   font-family: "Times New Roman", Times, serif;
 }
 
+/*Párrafo identificado por esta clase*/
 .traduccionA {
   text-align: justify;
   padding: 1% 20% 3%;
@@ -205,6 +207,7 @@ p {
   font-family: "Times New Roman", Times, serif;
 }
 
+/*Contenedor de las imágenes que se deslizan de forma automática*/
 .container {
   display: flex;
   align-items: center;
@@ -279,6 +282,7 @@ p {
   }
 }
 
+/*Tipos de traducción*/
 .indice {
   display: flex;
   flex-direction: column;
@@ -302,6 +306,22 @@ ol {
   font-family: "Times New Roman", Times, serif;
 }
 
+/*Estilos de la tabla, que contiene más imágenes por tipo de Traducción Audiovisual*/
+.tablaUno {
+  border-color: #1e6da5;
+  text-align: center;
+  align-items: center;
+  justify-items: center;
+  padding: 6px;
+  font-family: "Times New Roman", Times, serif;
+  cursor: pointer;
+  font-size: 25px;
+}
+
+.tablaUno:hover {
+  border-color: rgb(172, 92, 163);
+}
+
 th {
   border: none;
   padding-bottom: 2%;
@@ -311,22 +331,12 @@ th:hover {
   color: #ae266a;
 }
 
-.tablaUno {
-  border-color: #1e6da5;
-  text-align: center;
-  align-items: center;
-  justify-items: center;
-  padding: 6px;
-  font-family: "Times New Roman", Times, serif;
-  cursor: pointer;
-  font-size: 26px;
-}
-
 a:link {
   color: black;
   text-decoration: none;
 }
 
+/*Texto con gradación, usa los valores definidos al principio*/
 h1 {
   font-family: "Poppins", sans-serif;
   font-size: 40px; /* Tamaño de texto ajustado a 40px */
@@ -396,6 +406,7 @@ h1 {
   }
 }
 
+/*Estilo del formulario*/
 #formulario {
   display: flex;
   flex-direction: column;
@@ -463,6 +474,7 @@ button:active {
   transition-duration: calc(var(--spring-duration) * 0.5);
 }
 
+/*Brillo dle botón dle formulario*/
 .shimmer {
   position: absolute;
   inset: -40px;
@@ -536,6 +548,7 @@ button.active .text {
   animation: text 0.66s ease-in 1 both;
 }
 
+/*Estilo de los otros dos botoens del formulario*/
 .usuario {
   display: flex;
   justify-content: center;
@@ -556,6 +569,7 @@ button.active .text {
   box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
 }
 
+/*Estilo del reloj*/
 .reloj {
   font-family: "Times New Roman", Times, serif;
   color: #641d40;
@@ -579,10 +593,7 @@ button.active .text {
   padding: 5px;
 }
 
-.tablaUno:hover {
-  border-color: rgb(172, 92, 163);
-}
-
+/*Estilo de los procesos*/
 .procesos {
   position: relative;
   width: 90%;
@@ -659,6 +670,7 @@ button.active .text {
   transition-delay: 0.2s;
 }
 
+/*Para pantallas de menor tamaño*/
 @media (max-width: 1000px) {
   .procesos {
     gap: 80px;

@@ -4,6 +4,7 @@ ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
+/*Establecemos conexión con el servidor*/
 $servidor = "localhost";
 $usuario = "root"; 
 $contrasena = "";
@@ -15,6 +16,9 @@ if ($conn->connect_error) {
     die("Conexión fallida: " . $conn->connect_error);
 }
 
+
+/*Si no ha habido error, nos conectamos y enviamos contraseña y nombre(usuario)*/
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Verificar que los campos no estén vacíos
     if (isset($_POST['nombre']) && isset($_POST['contrasena']) && 
@@ -22,6 +26,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         
         $nombre = $_POST['nombre'];
         $contrasena = $_POST['contrasena'];
+
+        /*En la base de datos, comprobamos que el usuario y la contraseña existan, de ser así, redirigimos a la página ya logeados*/
+
 
         $stmt = $conn->prepare("SELECT * FROM usuarios_contacto WHERE nombre = ? AND contrasena = ?");
         $stmt->bind_param("ss", $nombre, $contrasena);
@@ -43,6 +50,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         exit;
     }
 }
+
+/*Cerramos la conexión*/
 
 $conn->close();
 ?>

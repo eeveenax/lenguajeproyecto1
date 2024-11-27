@@ -10,10 +10,12 @@ const colors = [
   "#ff00ff",
 ];
 
+/* */
 let particles = [];
 let mousePos = { x: 0, y: 0 };
 let isExploding = false;
 
+/* */
 class Particle {
   constructor(x, y) {
     this.x = x;
@@ -25,12 +27,14 @@ class Particle {
     this.life = 100;
   }
 
+  /* */
   update() {
     this.x += this.speedX;
     this.y += this.speedY;
     this.life -= 1;
   }
 
+  /* */
   draw() {
     ctx.beginPath();
     ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
@@ -39,17 +43,20 @@ class Particle {
   }
 }
 
+/* */
 function resizeCanvas() {
   canvas.width = window.innerWidth;
   canvas.height = window.innerHeight;
 }
 
+/* */
 function createExplosion(x, y) {
   for (let i = 0; i < 50; i++) {
     particles.push(new Particle(x, y));
   }
 }
 
+/* */
 function animate() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
 
@@ -67,6 +74,7 @@ function animate() {
   requestAnimationFrame(animate);
 }
 
+/* */
 function handleMouseMove(event) {
   mousePos.x = event.clientX;
   mousePos.y = event.clientY;

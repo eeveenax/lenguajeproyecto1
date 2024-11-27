@@ -15,6 +15,7 @@ body {
   background-color: #8d959d;
 }
 
+/*Página inicial, la antigua*/
 .old-page {
   position: absolute;
   inset: 0;
@@ -22,6 +23,8 @@ body {
   background-size: cover;
   transform: scale(1.5);
 }
+
+/*Imágenes centrales y efectos*/
 @media (orientation: portrait) {
   .old-page {
     -webkit-mask: url("https://assets.codepen.io/907471/tail.svg?v1") center top
@@ -45,6 +48,8 @@ body {
     animation-fill-mode: forwards;
   }
 }
+
+/*Imágenes apaisadas*/
 @media (orientation: landscape) {
   .old-page {
     -webkit-mask: url("https://assets.codepen.io/907471/tail.svg?v1") center top
@@ -68,6 +73,8 @@ body {
     animation-fill-mode: forwards;
   }
 }
+
+/* */
 @media (orientation: landscape) and (max-height: 300px) {
   .old-page {
     -webkit-mask-size: 10rem 10rem, 500% 500%, 100% 30%;
@@ -75,6 +82,7 @@ body {
   }
 }
 
+/* */
 @keyframes hide-view-portrait {
   from {
     -webkit-mask-position: 50% 120%, 50% 0%, 50% 150%;
@@ -98,6 +106,8 @@ body {
     transform: scale(1);
   }
 }
+
+/* */
 @keyframes hide-view-landscape {
   from {
     -webkit-mask-position: 50% 120%, 50% 0%, 50% 150%;
@@ -121,6 +131,8 @@ body {
     transform: scale(1);
   }
 }
+
+/*Nueva página, que sustituye a la anterior*/
 .new-page {
   display: flex;
   flex-direction: column;
@@ -144,6 +156,8 @@ body {
     opacity: 1; /* Al final completamente visible */
   }
 }
+
+/*El formulario de contraseña aparece*/
 .fadein {
   width: 100%;
   height: 100%;
@@ -165,6 +179,8 @@ body {
     opacity: 1;
   }
 }
+
+/*La imagen candado tiene un movimiento continuo por todas la pantalla*/
 .imagen {
   display: inline-flex;
   justify-content: center;
@@ -212,6 +228,8 @@ body {
     background-position: 0 0; /* Regresa a la posición inicial */
   }
 }
+
+/*Disposición de los elementos del formulario de la contraseña*/
 .elementos {
   display: inline-flex;
   flex-direction: column;

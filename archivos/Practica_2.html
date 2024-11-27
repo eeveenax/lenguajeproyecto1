@@ -121,6 +121,11 @@
     </div>
 
     <br />
+    <p class="traduccionA">
+      En la siguiente tabla, se puede observar la misma clasificación de la
+      traducción audiovisual, pero se incluyen algunas imágenes para que puedas
+      hacerte una idea de las diferencias.
+    </p>
 
     <table border="5px" class="tablaUno">
       <tr>
@@ -268,6 +273,8 @@
     </div>
   </footer>
   <script>
+    /*Para saber si el usuario está logeado o no, si es así, aparece el menú y nos dirigimos a loggedin, página en la que ya no sale el formualrio*/
+
     window.onload = function () {
       const urlParams = new URLSearchParams(window.location.search);
       const loggedIn = urlParams.get("loggedin");

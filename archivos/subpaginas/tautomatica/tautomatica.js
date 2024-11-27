@@ -1,3 +1,5 @@
+/* */
+
 const menu = document.getElementById("menu");
 const navegador = document.getElementById("navegador");
 const googleh = document.getElementById("googleH");
@@ -9,10 +11,12 @@ var foto3 = document.getElementById("pons");
 const mensaje = document.getElementById("mensaje");
 var foto = document.querySelector(".trueda");
 
+/* */
 menu.addEventListener("click", function () {
   navegador.classList.toggle("mostrar");
 });
 
+/* */
 foto.addEventListener("animationend", function () {
   foto.addEventListener("click", function () {
     if (mensaje.style.display === "none" || mensaje.style.display === "") {
@@ -24,6 +28,7 @@ foto.addEventListener("animationend", function () {
   });
 });
 
+/* */
 function mostrarDiv(fotos, div) {
   fotos.addEventListener("animationend", function () {
     if (div.style.display === "none" || div.style.display === "") {
@@ -32,6 +37,7 @@ function mostrarDiv(fotos, div) {
   });
 }
 
+/* */
 mostrarDiv(foto1, googleh);
 mostrarDiv(foto2, deeplh);
 mostrarDiv(foto3, ponsh);

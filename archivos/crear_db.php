@@ -2,7 +2,7 @@
 // Conexión a MySQL (WAMP)
 $servidor = "localhost";
 $usuario = "root";
-$contrasena = ""; // Si tienes una contraseña configurada en MySQL, colócala aquí
+$contrasena = "";
 
 // Crear conexión
 $conn = new mysqli($servidor, $usuario, $contrasena);
@@ -27,7 +27,7 @@ if (!$conn->select_db('formulario_contacto')) {
     echo "Base de datos seleccionada.<br>";
 }
 
-// Eliminar tabla si existe (opcional)
+// Eliminar tabla si ya existe (esto es solo opcional)
 $sql = "DROP TABLE IF EXISTS consulta_contacto";
 $conn->query($sql);
 
