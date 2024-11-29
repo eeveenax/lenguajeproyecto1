@@ -1,0 +1,144 @@
+body {
+  background-color: rgb(247, 220, 240);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.navegador {
+  margin-top: 5vh;
+  text-decoration: none;
+  color: rgb(80, 30, 67);
+}
+
+h1 {
+  color: rgb(159, 19, 117);
+}
+
+h1:hover {
+  color: rgb(168, 53, 168);
+}
+
+/* */
+.formulario {
+  background-color: rgb(216, 128, 157);
+  padding: 20px;
+  cursor: pointer;
+}
+
+.bocadillo {
+  padding: 20px 40px 26px;
+  width: 40px;
+  height: 20px;
+  border-radius: 60%;
+  border: 3px;
+  background-color: rgb(203, 133, 193);
+  margin: auto;
+  animation-delay: 13s;
+  animation-name: fadeIn;
+  animation-duration: 5s;
+  animation-fill-mode: forwards;
+  cursor: pointer;
+  opacity: 0;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/*Foto del email, para que me contacten*/
+.fotoEmail {
+  align-items: center;
+  margin: 1px 0 0 12px;
+}
+
+/*Imagen PixelArt gif con efecto entrada en pantalla*/
+.fotoYo {
+  animation-delay: 0s;
+  animation-duration: 14s;
+  animation-name: slidein;
+  margin: -20px -40px 0 -48px;
+  animation-fill-mode: forwards;
+}
+
+@keyframes slidein {
+  from {
+    margin-left: -650%;
+    width: 140px;
+  }
+  to {
+    margin-left: -42px;
+    width: 140px;
+  }
+}
+
+a {
+  text-decoration: none;
+  font-size: 20px;
+}
+
+/*Foto PixelArt en la que la muñeca ya no se mueve*/
+.fotoyoquieta {
+  margin: -20px -40px 0 -48px;
+  cursor: pointer;
+}
+
+/*Footer con mi nombre*/
+#eve {
+  margin: auto;
+  text-align: center;
+}
+
+#eve:hover {
+  color: green;
+}
+
+p {
+  align-items: center;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+/*Confetis que explotan cuando se envía el mensaje*/
+#confettiCanvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 96vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: -1;
+}
+
+/*Botón de enviar*/
+.contenedorBoton {
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+
+.miboton {
+  color: 2px solid rgb(202, 116, 169);
+  border: 2px solid rgb(216, 2, 134);
+  border-radius: 0px;
+  padding: 10px;
+  width: 60px;
+  display: inline-block;
+  font-family: "Lucida Console", monospace;
+  font-size: 10px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  box-shadow: inset 0 0 0 0 #d80286;
+  -webkit-transition: ease-out 0.4s;
+  -moz-transition: ease-out 0.4s;
+  transition: ease-out 0.4s;
+}
+
+.miboton:hover {
+  box-shadow: inset 400px 50px 0 0 #d80286;
+}

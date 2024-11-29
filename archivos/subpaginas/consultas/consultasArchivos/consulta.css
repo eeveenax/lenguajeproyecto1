@@ -1,0 +1,226 @@
+body {
+  display: flex;
+  flex-direction: column;
+  background-image: url(../img/pregunta.jpg);
+  background-repeat: repeat-x;
+  background-size: contain;
+  text-align: center;
+  align-items: center;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.menu {
+  position: fixed;
+  left: 5px;
+  cursor: pointer;
+  z-index: 1000;
+  margin-top: 12vh;
+}
+
+nav {
+  background-color: #da84e0;
+  width: 94px;
+  height: 230px;
+  padding: 16px 10px 12px 20px;
+  text-align: left;
+  display: none;
+  position: absolute;
+  left: 0;
+  animation-name: slide-in;
+  opacity: 0;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+  margin-top: 18vh;
+  position: fixed;
+}
+
+@keyframes slide-in {
+  from {
+    transform: translateX(-250px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0); /* Termina en su posición actual */
+    opacity: 1;
+  }
+}
+
+nav.mostrar {
+  display: block;
+}
+
+nav a {
+  color: black;
+  text-decoration: none;
+  display: block;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 16px;
+}
+
+h1 {
+  text-align: center;
+  animation-name: blur;
+  animation-duration: 4s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in;
+  font-size: 50px;
+  color: transparent; /* Hace que el fondo sea visible en lugar del color del texto */
+  background-image: linear-gradient(180deg, #ffe993, rgb(181, 60, 215));
+  background-clip: text; /*El fondo solo es visible en el texto como tal, de ahí que los colores no se salgan*/
+  -webkit-background-clip: text; /* Compatibilidad para navegadores WebKit */
+}
+
+@keyframes blur {
+  0% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+p {
+  text-align: justify;
+  font-size: 18px;
+  font-weight: bolder;
+  color: black;
+  margin: 2% 10% 2%;
+}
+
+span {
+  color: dark rgb(131, 40, 72);
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+span:hover {
+  color: rgb(200, 48, 157);
+}
+
+.miboton {
+  display: inline-block;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+  width: 70px;
+  border: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 20px;
+  box-shadow: rgb(79, 19, 96);
+  background-color: rgb(181, 60, 215);
+  transition: box-shadow 0.3s ease-in-out;
+}
+.miboton:hover {
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3); /* Aumenta el desplazamiento y la opacidad de la sombra */
+}
+
+#usuarioNombre {
+  padding: 2px;
+  margin-bottom: 0.5cm;
+}
+
+#mensajeEntrada {
+  height: 8cm;
+  width: 10cm;
+  font-size: 16px;
+}
+
+#texto1 {
+  font-family: "Times New Roman", Times, serif;
+  width: 8cm;
+  font-size: 124x;
+  border-radius: 5px;
+  border: 8px solid rgb(219, 103, 225);
+}
+
+.textoinfo {
+  display: flex;
+  flex-direction: column;
+  width: 10cm;
+  height: 100%;
+  font-family: "Times New Roman", Times, serif;
+  background-color: rgb(246, 174, 244);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 1cm;
+  color: black;
+}
+
+#botonBuscar {
+  display: inline-block;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 30px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  position: relative;
+  border-radius: 10px;
+  margin-bottom: -40vh;
+  color: white;
+  background-color: rgb(181, 60, 215);
+}
+
+#botonBuscar:before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #ff0000,
+    #ff7300,
+    #fffb00,
+    #48ff00,
+    #00ffd5,
+    #002bff,
+    #7a00ff,
+    #ff00c8,
+    #ff0000
+  );
+  position: absolute;
+  z-index: -1;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+#botonBuscar:active {
+  color: #000;
+}
+
+#botonBuscar:hover:before {
+  opacity: 1;
+}
+
+#botonBuscar:after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+@keyframes glowing {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}

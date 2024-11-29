@@ -61,7 +61,7 @@ $conn->close();
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contacto</title>
     <link rel="shortcut icon" href="img/contacto.png" />
-    <link rel="stylesheet" href="contacto.css" />
+    <link rel="stylesheet" href="contactoArchivos/contacto.css" />
   </head>
   <body>
   
@@ -194,6 +194,6 @@ $conn->close();
 
     <canvas id="confettiCanvas"></canvas>
 
-    <script src="contacto.js"></script>
+    <script src="contactoArchivos/contacto.js"></script>
   </body>
 </html>
