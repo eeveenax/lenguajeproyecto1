@@ -1,0 +1,49 @@
+body {
+  font-family: monospace;
+  background-image: url(../img/diccback.gif);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+}
+.contenedor {
+  margin: auto;
+  display: table;
+}
+
+h1 {
+  position: relative;
+  float: left;
+  background: black;
+  color: #fff;
+  font-size: 2.5em;
+}
+
+h1 span {
+  position: absolute;
+  right: 0;
+  width: 0;
+  background: white;
+  border-left: 1px solid #000;
+  animation: escribir 5s steps(30) forwards;
+}
+
+@keyframes escribir {
+  from {
+    width: 100%;
+  }
+  to {
+    width: 0;
+  }
+}
+
+.dic {
+  height: auto;
+  transform: translateX(50%);
+  width: 50%;
+  background-color: rgb(121, 68, 207);
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+}
