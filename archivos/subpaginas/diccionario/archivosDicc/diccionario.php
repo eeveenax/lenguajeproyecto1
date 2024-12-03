@@ -22,7 +22,7 @@ if ($conn->connect_error) {
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['nombreBuscar'])) {
     $nombre = $conn->real_escape_string(trim($_POST['nombreBuscar'])); 
 
-    $sql = "SELECT * FROM consulta_contacto WHERE nombre LIKE ?"; 
+    $sql = "SELECT * FROM usuarios_dicc WHERE nombre LIKE ?"; 
     $stmt = $conn->prepare($sql);
     $searchTerm = "%" . $nombre . "%";
     $stmt->bind_param("s", $searchTerm);

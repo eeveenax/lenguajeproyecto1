@@ -10,6 +10,7 @@ var foto2 = document.getElementById("deepl");
 var foto3 = document.getElementById("pons");
 const mensaje = document.getElementById("mensaje");
 var foto = document.querySelector(".trueda");
+var form = document.querySelector(".dicc");
 
 var con1 = document.querySelector(".con1");
 
@@ -44,6 +45,7 @@ mostrarDiv(foto1, googleh);
 mostrarDiv(foto2, deeplh);
 mostrarDiv(foto3, ponsh);
 mostrarDiv(foto3, con1);
+mostrarDiv(foto3, form);
 
 $(function () {
   // Bahasa Yang Didukung ):

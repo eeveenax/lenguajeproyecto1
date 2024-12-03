@@ -260,7 +260,7 @@ p,
   margin: 0 40vh 2vh;
   min-height: 50px; /* Evita que el contenedor se encoja demasiado */
   min-width: 50px; /* Evita que el contenedor se encoja demasiado */
-  width: 64%;
+  width: 62%;
   transform: translateX(50%, -50%);
 }
 .select-lang {
@@ -329,7 +329,7 @@ p,
   margin: 0 40vh 10vh;
   min-height: 50px; /* Evita que el contenedor se encoja demasiado */
   min-width: 50px; /* Evita que el contenedor se encoja demasiado */
-  width: 64%;
+  width: 62%;
   transform: translateX(50%, -50%);
 }
 #output {
@@ -344,4 +344,59 @@ p,
   display: block;
   text-align: right;
   padding: 10px;
+}
+
+.dicc {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  margin: 10px;
+  width: 62%;
+  transform: translateX(28%);
+  min-height: 50px; /* Evita que el contenedor se encoja demasiado */
+  min-width: 50px;
+}
+
+.elementosdic,
+.boton {
+  background-color: cadetblue;
+  padding: 12px;
+}
+
+#usuarioNombre {
+  padding: 2px;
+  margin-bottom: 0.5cm;
+}
+
+#mensajeEntrada {
+  height: 2cm;
+  width: 20cm;
+  font-size: 16px;
+}
+
+@media (max-width: 100px) {
+  .dicc,
+  #container {
+    width: 400px; /* Fija el ancho a 400px */
+    margin: 0 auto; /* Centra horizontalmente */
+    transform: none; /* Elimina transformaciones para asegurar el centrado */
+    padding: 10px; /* Ajusta el relleno si es necesario */
+  }
+
+  .output {
+    width: 400px; /* Asegura el tamaño en pantallas pequeñas */
+    margin: 10px auto; /* Centra horizontalmente con algo de margen */
+  }
+
+  .elementosdic,
+  .boton {
+    width: auto; /* Asegura que se adapten al ancho disponible */
+  }
+
+  #mensajeEntrada {
+    height: 2cm;
+    width: 10cm;
+    font-size: 16px;
+  }
 }

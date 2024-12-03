@@ -166,6 +166,35 @@
       </div>
     </div>
 
+    <div class="dicc" style="display: none">
+      <form
+        id="formulario"
+        class="formulario"
+        action="../tautomatica/traAutoArchivos/enviar.php"
+        method="POST"
+      >
+        <div class="elementosdic">
+          <input
+            type="text"
+            name="nombre"
+            id="usuarioNombre"
+            placeholder="Escribe un nombre..."
+            required
+          />
+          <br />
+          <textarea
+            name="mensajeEntrada"
+            id="mensajeEntrada"
+            placeholder="Lengua fuente. Término fuente || Lengua Salida. Término salida"
+            required
+          ></textarea>
+        </div>
+        <div class="boton">
+          <input type="submit" value="Enviar" class="miboton" id="miboton" />
+        </div>
+      </form>
+    </div>
+
     <br />
     <div>
       <img src="img/imagen.rodando.png" width="90" height="90" class="trueda" />
