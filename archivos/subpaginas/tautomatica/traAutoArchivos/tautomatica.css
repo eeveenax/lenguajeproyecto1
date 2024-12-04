@@ -351,7 +351,7 @@ p,
   flex-direction: column;
   text-align: center;
   align-items: center;
-  margin: 10px;
+  margin: 5px;
   width: 62%;
   transform: translateX(28%);
   min-height: 50px; /* Evita que el contenedor se encoja demasiado */
@@ -399,4 +399,15 @@ p,
     width: 10cm;
     font-size: 16px;
   }
+}
+
+.divdic a {
+  font-size: 20px;
+  text-decoration: none !important;
+  color: #a4461e !important;
+}
+
+.divdic a:visited {
+  text-decoration: none !important;
+  color: #a4461e !important;
 }
