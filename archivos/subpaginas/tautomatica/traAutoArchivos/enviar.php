@@ -2,8 +2,6 @@
 ini_set('display_errors', 1);
 error_reporting(E_ALL);
 
-
-/* */
 $servidor = "localhost";
 $usuario = "root"; 
 $contrasena = "";
@@ -17,23 +15,25 @@ if ($conn->connect_error) {
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-
-    /* */
     $nombre = $conn->real_escape_string(trim($_POST['nombre']));
     $mensaje = $conn->real_escape_string(trim($_POST['mensajeEntrada']));
 
-
-    /* */
     if (!empty($nombre) && !empty($mensaje)) {
         $sql = "INSERT INTO usuarios_dicc (nombre, mensaje) VALUES ('$nombre', '$mensaje')";
         if ($conn->query($sql) === TRUE) {
-            header("Location: http://localhost/proyecto/archivos/subpaginas/tautomatica/tautomatica.html");
-            exit;
+            // Enviar mensaje de éxito y mantener la misma página
+            echo "<script>
+                    alert('Mensaje enviado correctamente.');
+                    // Opcional: si necesitas limpiar el formulario después de enviar:
+                    document.getElementById('formulario').reset();
+                  </script>";
         } else {
-            echo "Error: " . $conn->error;
+            // Si ocurre un error al insertar
+            echo "<script>alert('Error al enviar el mensaje. Intenta nuevamente.');</script>";
         }
     } else {
-        echo "Por favor completa todos los campos.";
+        // Si los campos están vacíos
+        echo "<script>alert('Por favor completa todos los campos.');</script>";
     }
 }
 ?>
