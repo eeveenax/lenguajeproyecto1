@@ -40,7 +40,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['nombreBuscar'])) {
                 while ($row = $result->fetch_assoc()) {
                     echo "<div>";
                     echo "<strong>Nombre:</strong> " . htmlspecialchars($row['nombre']) . "<br />";
-                    echo "<strong>Mensaje:</strong> " . htmlspecialchars($row['mensaje']) . "<br />";
+                    echo "<strong>Término:</strong> " . htmlspecialchars($row['mensaje']) . "<br />";
                     echo "</div><hr />";
                 }
             } else {
