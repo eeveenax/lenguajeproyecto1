@@ -1,16 +1,15 @@
 const botonBuscar = document.getElementById("botonBuscar");
 
-/* */
 botonBuscar.addEventListener("click", async function () {
   const nombreBuscar = document.querySelector("#texto1").value;
+
   if (!nombreBuscar) {
     alert("Por favor, ingresa un nombre para buscar.");
     return;
   }
 
-  /* */
   try {
-    const response = await fetch("busqueda.php", {
+    const response = await fetch("archivosDicc/diccionario.php", {
       method: "POST",
       headers: {
         "Content-Type": "application/x-www-form-urlencoded",
@@ -22,7 +21,6 @@ botonBuscar.addEventListener("click", async function () {
       throw new Error("Error en la respuesta del servidor.");
     }
 
-    /* */
     const data = await response.text();
     document.getElementById("textoinfo").innerHTML = data;
   } catch (error) {

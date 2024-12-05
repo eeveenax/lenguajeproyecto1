@@ -379,7 +379,7 @@ h1 {
   left: 0;
   height: 100%;
   width: 100%;
-  background: url("img/vanelope.png");
+  background: url("../img/vanelope.png");
   border-radius: 30px;
   background-size: cover;
   background-position: center;
