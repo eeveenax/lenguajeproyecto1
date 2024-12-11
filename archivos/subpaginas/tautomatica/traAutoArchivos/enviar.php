@@ -54,6 +54,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       rel="stylesheet"
     />
   </head>
+  <header>
+    <div class="contenedor">
+      <div class="sombra">Traductores Automáticos</div>
+      <div class="tAutomatico">Traductores Automáticos</div>
+    </div>
+  </header>
   <body>
     <div>
       <img
@@ -96,9 +102,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         >
       </nav>
     </div>
-    <div class="tAutomatico">
-      <h1 class="tAutomaticoTitulo">Traductores Automáticos</h1>
-    </div>
+
     <p>
       La traducción automática es una nueva forma de traducción que consiste
       usar la inteligencia artificial con el objetivo de traducir de manera
@@ -112,7 +116,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       todos <b><i>Google Translator</i></b>
     </p>
     <br />
-    <h2 id="traductoresAuto">Traductores automáticos</h2>
 
     <div id="traductores">
       <br />
@@ -208,7 +211,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       <form
         id="formulario"
         class="formulario"
-        action=""
+        action="../tautomatica/traAutoArchivos/enviar.php"
         method="POST"
       >
         <div class="elementosdic">
@@ -233,7 +236,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <div class="divdic">
           <a
             href="http://localhost\proyecto\archivos\subpaginas\diccionario\diccionario.html"
-            target="_blank">Diccionario</a
+            >Diccionario</a
           >
         </div>
       </form>
@@ -249,5 +252,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     </div>
     <br />
   </body>
+  <footer></footer>
+
   <script src="tautomatica.js"></script>
 </html>

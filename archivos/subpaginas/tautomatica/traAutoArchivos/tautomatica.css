@@ -1,3 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
+
+header {
+  background-color: rgb(164, 70, 30, 0.3);
+  height: 180px;
+  width: auto;
+}
+
+footer {
+  background-color: rgb(164, 70, 30, 0.3);
+  height: 100px;
+  width: auto;
+}
+
 body {
   display: flex;
   flex-direction: column;
@@ -52,33 +66,38 @@ nav a {
   font-size: 16px;
 }
 
-/* */
+.contenedor {
+  position: absolute;
+  font-weight: bold;
+  top: 20%;
+  left: 50%; /* Centrado horizontal */
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
+  letter-spacing: 2px;
+}
+
+.sombra {
+  font-family: "Anton", sans-serif;
+  font-size: 40px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: rgb(7, 7, 3);
+  transform: skewX(50deg) scale(1, 2);
+  transform-origin: bottom left;
+  z-index: -1;
+  white-space: nowrap;
+  letter-spacing: 10px;
+}
+
 .tAutomatico {
-  padding: 30px;
-  margin: 0;
-  background-color: rgb(164, 70, 30, 0.3);
-}
-
-/* */
-.tAutomaticoTitulo {
-  text-align: center;
-  font-family: "Times New Roman", Times, serif;
-  color: #a4461e;
-  animation-name: fadein;
-  animation-duration: 5s;
-  animation-fill-mode: forwards;
-}
-@keyframes fadein {
-  0% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 0.5;
-  }
-
-  100% {
-    opacity: 1;
-  }
+  position: relative;
+  color: #b97a55;
+  -webkit-text-stroke: 0.2px black;
+  font-family: "Anton", sans-serif;
+  font-size: 60px;
+  white-space: nowrap;
+  letter-spacing: 2px;
 }
 
 /* */
@@ -90,15 +109,6 @@ p,
   text-align: justify;
   font-family: "Times New Roman", Times, serif;
   padding: 3% 20% 3%;
-}
-
-/* */
-#traductoresAuto {
-  margin: auto;
-  text-align: center;
-  font-family: "Times New Roman", Times, serif;
-  color: #b26521;
-  margin-top: 1vh;
 }
 
 /* */
