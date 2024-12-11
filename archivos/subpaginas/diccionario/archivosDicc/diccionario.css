@@ -47,3 +47,43 @@ h1 span {
   text-align: center;
   align-items: center;
 }
+
+button {
+  position: relative;
+  display: block;
+  margin: 10px 50px;
+  height: 30px;
+  width: 100px;
+  border: none;
+  /*   background-color: #A2CC9B; */
+  background-color: rgba(0, 0, 0, 0);
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  transition: 1s;
+  overflow: hidden;
+}
+button:after {
+  content: "";
+  position: absolute;
+  height: 50px;
+  left: -300px;
+  top: 0%;
+  width: 500px;
+  z-index: -1;
+  -webkit-transition: all 0.75s ease 0s;
+  -moz-transition: all 0.75s ease 0s;
+  -o-transition: all 0.75s ease 0s;
+  transition: all 0.75s ease 0s;
+  background: linear-gradient(
+    135deg,
+    #dd6ac0 0%,
+    #dd6ac0 50%,
+    #b6acb4 50%,
+    #b6acb4 100%
+  );
+}
+button:hover:after {
+  left: 0px;
+  opacity: 1;
+}

@@ -457,3 +457,16 @@ p,
   text-decoration: none !important;
   color: #a4461e !important;
 }
+
+.divdic a,
+.divdic a:visited {
+  -webkit-text-stroke: 1px rgb(176, 229, 231);
+  font-variation-settings: "wght" 900, "ital" 1;
+  font-size: 40px;
+  text-align: center;
+  color: transparent;
+  font-family: "Meta", sans-serif;
+  text-shadow: 20px 20px 10px #7953da;
+  cursor: pointer;
+  font-weight: bolder;
+}
