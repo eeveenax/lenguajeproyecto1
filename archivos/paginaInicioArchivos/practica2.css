@@ -212,8 +212,8 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 500px;
-  max-width: 500px;
+  width: 900px;
+  max-width: 900px;
   overflow: hidden;
 }
 
