@@ -98,7 +98,7 @@ h2:hover {
   background-color: #e9c3e5;
 }
 
-h1 {
+.titulos {
   margin: auto;
   text-align: center;
   font-family: New Rocker;
@@ -417,13 +417,16 @@ h1 {
   align-items: center; /* Alinea las cartas verticalmente */
   flex-wrap: wrap; /* Permite que las cartas se ajusten en varias filas si es necesario */
   width: 1000px; /* Asegura que el contenedor ocupe todo el ancho disponible */
+  height: 400px;
+  margin-bottom: 100px;
 }
 
 .carta {
-  margin: 10px; /* Añade separación externa a las cartas */
-  width: 280px; /* Ajusta el ancho de las cartas */
-  height: 280px; /* Ajusta la altura de las cartas */
+  margin: 10px;
+  width: 300px; /* Ajusta el ancho de las cartas */
+  height: 100%; /* Ajusta la altura de las cartas */
   cursor: pointer;
+
   border-radius: 16px 16px 0 0;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1), 0 0 4px rgba(0, 0, 0, 0.23);
   overflow: hidden;
@@ -433,39 +436,26 @@ h1 {
   justify-content: space-between; /* Organiza el contenido de las cartas */
 
   &__image {
-    background-color: #000;
+    background-image: url(../img/aegisub.png);
+    background-size: contain;
     position: relative;
     border-radius: 16px 16px 0 0;
-    .imagen {
-      width: 450px;
-      height: auto;
-      transition: 0.7s;
-    }
   }
 
   &__content {
     &__box {
-      width: 450px;
-      height: 120px;
+      width: 300px;
+      height: 80px;
       overflow: hidden;
-      background-color: white;
+      background-color: rgb(218, 188, 188);
       border-radius: 0 0 16px 16px;
       box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
       position: absolute;
-      top: 300px;
-      padding: 28px;
       transition: 0.7s;
       .tituloCarta {
         margin: 0;
-        font-weight: 900;
       }
-      .subCarta {
-        color: #ef633d;
-        font-weight: 600;
-        font-size: 20px;
-        margin-top: 4px;
-        margin-bottom: 0px;
-      }
+
       p {
         color: grey;
         font-size: 16px;
@@ -482,7 +472,7 @@ h1 {
 
   &:hover {
     transition: 0.7s;
-    height: 150px;
+    height: 250px;
   }
 
   &:hover img {
