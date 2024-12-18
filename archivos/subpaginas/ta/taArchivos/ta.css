@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Joti+One&family=Mystery+Quest&display=swap");
 
 body {
   margin: 0;
@@ -8,6 +9,7 @@ body {
   justify-content: flex-start;
   align-items: center;
   background-color: #e5f6f0;
+  width: 100%;
 }
 
 .menu {
@@ -72,8 +74,9 @@ h1 {
   align-items: center; /* Alinea los elementos verticalmente */
   overflow: hidden; /* Evita el desbordamiento de texto */
   color: rgb(32, 54, 32);
-  width: 500px;
-  font-size: 40px;
+  width: 700px;
+  font-size: 50px;
+  font-family: Joti One;
 }
 
 /* Animación de aparición para los textos de izquierda y derecha */
@@ -103,7 +106,7 @@ h1 {
     opacity: 0;
   }
   100% {
-    transform: translateX(-8%); /* Llega a la posición deseada */
+    transform: translateX(-1%); /* Llega a la posición deseada */
     opacity: 1;
   }
 }
@@ -118,13 +121,14 @@ h1 {
     opacity: 0;
   }
   100% {
-    transform: translateX(0); /* Llega a su posición final */
+    transform: translateX(5%); /* Llega a su posición final */
     opacity: 1;
   }
 }
 
 /* Estilos para la sección de texto principal */
 .ta {
+  margin-top: -40px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -133,12 +137,12 @@ h1 {
   padding: 1% 20% 3%;
   font-size: 20px;
   font-family: "Times New Roman", Times, serif;
-  width: 80%;
+  width: auto;
 }
 
 /* Estilos de la tabla */
 .tabla2 {
-  width: 60%;
+  width: 80%;
   max-width: 80%;
   height: 100%;
   border-color: #29425d;
@@ -203,8 +207,8 @@ td {
 
 /* Estilo para los párrafos */
 p {
-  width: 60%;
-  max-width: 60%;
+  width: 80%;
+  max-width: 80%;
   color: black;
   text-align: justify;
   font-size: 20px;
@@ -257,8 +261,8 @@ video {
 /* Estilos para el slider de imágenes */
 
 .slider {
-  width: 60%;
-  max-width: 60%;
+  width: 80%;
+  max-width: 80%;
   height: 400px;
   overflow: hidden;
   position: relative;
@@ -547,7 +551,7 @@ hr {
   content: "";
   position: absolute;
   width: 100%;
-  height: 250%;
+  height: 150%;
   background: #40e0d0;
   background: -webkit-linear-gradient(to right, #ff0080, #ff8c00, #40e0d0);
   background: linear-gradient(to right, #ff0080, #ff8c00, #40e0d0);
@@ -567,7 +571,7 @@ hr {
 
 a .btn {
   font-family: Arial;
-  background-color: #baefd8;
+  background-color: hsl(307, 49%, 81%);
   border: 1px solid #777;
   border-radius: 3px;
   display: block;

@@ -1,3 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=Playwrite+US+Trad:wght@100..400&family=Princess+Sofia&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kings&display=swap");
+
 body {
   background-color: rgb(247, 220, 240);
   display: flex;
@@ -13,6 +16,9 @@ body {
 
 h1 {
   color: rgb(159, 19, 117);
+  font-family: Princess sofia, serif;
+  font-size: 80px;
+  margin-bottom: -10px;
 }
 
 h1:hover {
@@ -24,6 +30,8 @@ h1:hover {
   background-color: rgb(216, 128, 157);
   padding: 20px;
   cursor: pointer;
+  font-size: 14px;
+  font-family: Playwrite US Trad, serif;
 }
 
 .bocadillo {
@@ -90,8 +98,9 @@ a {
 
 /*Footer con mi nombre*/
 #eve {
-  margin: auto;
+  margin-top: -50px;
   text-align: center;
+  font-family: Princess sofia, serif;
 }
 
 #eve:hover {
@@ -102,6 +111,10 @@ p {
   align-items: center;
   text-align: center;
   margin-bottom: 50px;
+  font-family: Kings, serif;
+  letter-spacing: 2px;
+  font-size: 20px;
+  font-weight: bolder;
 }
 
 /*Confetis que explotan cuando se envía el mensaje*/

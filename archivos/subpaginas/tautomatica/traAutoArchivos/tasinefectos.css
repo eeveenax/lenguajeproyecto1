@@ -111,6 +111,7 @@ p,
   text-align: justify;
   font-family: "Times New Roman", Times, serif;
   padding: 3% 20% 3%;
+  font-size: 20px;
 }
 
 /* */
@@ -303,7 +304,13 @@ p,
 .elementosdic,
 .boton {
   background-color: cadetblue;
-  padding: 12px;
+}
+
+.elementosdic {
+  padding-top: 40px;
+}
+.boton {
+  padding-bottom: 20px;
 }
 
 #usuarioNombre {
@@ -390,4 +397,20 @@ p,
   text-shadow: 20px 20px 10px #7953da;
   cursor: pointer;
   font-weight: bolder;
+}
+
+.miboton {
+  margin: 10px 50px;
+  height: 30px;
+  width: 100px;
+  border: none;
+  color: black;
+  font-size: 12px;
+  font-weight: bold;
+  transition: 1s;
+  overflow: hidden;
+  background: #d8d8f5, #fbc7d4;
+  background: -webkit-linear-gradient(90deg, #d8d8f5, #fbc7d4);
+  background: linear-gradient(90deg, #d8d8f5, #fbc7d4);
+  border-radius: 10%;
 }
