@@ -4,6 +4,8 @@ const menu = document.getElementById("menu");
 const navegador = document.getElementById("navegador");
 const disney = document.getElementById("disney");
 const info = document.getElementById("info");
+const herramienta = document.getElementById("herramientaT");
+const boton = document.getElementById("boton");
 
 /* */
 menu.addEventListener("click", function () {
@@ -30,4 +32,8 @@ $(document).ready(function () {
       scale: 1.04,
     });
   });
+});
+
+boton.addEventListener("click", function () {
+  herramienta.classList.toggle("ocultar");
 });
