@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Libro CSS ConfiguroWeb</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"
+    />
+    <link rel="stylesheet" href="../libroher/libroArchivo/libro.css" />
+  </head>
+  <body>
+    <div class="libro">
+
+      <div class="cover">
+        <div class="book">
+          <label for="page-1" class="book__page book__page--1">
+            <img src="../libroher/img/her.jpg" height="550">
+          </label>
+  
+          <label for="page-2" class="book__page book__page--4">
+            <div class="page__content">
+              <h1 class="page__content-title"S>OMEGA T</h1>
+              <div class="page__content-text">
+                <img src="../libroher/img/omegaT.png" class="omegaT">
+                <p>
+                  OmegaT es una herramienta de memoria de traducción, es decir, un
+                  programa que registra equivalencias entre lenguas, una
+                  aplicación libre escrita en Java. La herramienta está pensada
+                  para ser utilizada por traductores profesionales.
+                  El usuario copia los documentos fuente, las memorias de
+                  traducción y los glosarios de los que dispone en las carpetas
+                  específicas del proyecto que va a traducir. Al abrir un
+                  proyecto, OmegaT extrae el texto a traducir de los documentos
+                  que reconoce. Al tiempo que se traduce cada segmento, OmegaT
+                  añade el texto traducido a la memoria de traducción. Durante la
+                  traducción de un segmento, las coincidencias parciales con la
+                  memoria de traducción y los glosarios se muestran en una ventana
+                  adyacente.
+                </p>
+                <br />
+                <p>
+                  El traductor puede insertar las coincidencias parciales usando
+                  el teclado. Opcionalmente, se pueden insertar automáticamente
+                  aquellas coincidencias que se encuentren por encima de un umbral
+                  predefinido por el usuario. El traductor puede cambiar en
+                  cualquier momento a otro documento en el mismo proyecto, usando
+                  el visor de archivos de proyecto. También puede cambiar a otro
+                  segmento en el mismo archivo, usando el teclado o haciendo doble
+                  clic en el segmento deseado. Siempre que se añadan al proyecto
+                  memorias de traducción o glosarios, o cuando se hayan realizado
+                  cambios sobre esos archivos, el traductor debe cargar de nuevo
+                  el proyecto, para que OmegaT reconozca los segmentos que se han
+                  añadido nuevos. También se debe cargar el proyecto de nuevo si
+                  se realiza algún cambio en las reglas de segmentación durante el
+                  proceso de traducción.
+                </p>
+              </div>
+              <div class="page__number">3</div>
+            </div>
+          </label>
+  
+          <!-- Resets the page -->
+          <input type="radio" name="page" id="page-1" />
+  
+          <!-- Goes to the second page -->
+          <input type="radio" name="page" id="page-2" />
+          <label class="book__page book__page--2">
+            <div class="book__page-front">
+              <div class="page__content">
+                <h1 class="page__content-book-title">
+                  Herramientas de traducción
+                </h1>
+                <p class="page__content-credits">
+                  <span>Evelia Gil Paredes</span>
+                </p>
+              </div>
+            </div>
+            <div class="book__page-back">
+              <div class="page__content">
+                <h1 class="page__content-title">TRADOS</h1>
+                <div class="page__content-text">
+                  <img src="../libroher/img/trados.png" class="trados">
+                  <p>
+                    SDL Trados es una herramienta de traducción asistida por
+                    ordenador (TAO) que desarrolló la empresa alemana Trados GmbH,
+                    actualmente distribuido por SDL International. Es un software
+                    para traductores. Este programa se basa en la creación de
+                    memorias de traducción, donde se guardarán con formato de
+                    segmentos todo el texto que se vaya traduciendo. Además, es
+                    posible organizar las memorias según los idiomas y determinar,
+                    por ejemplo, la fecha y horario del trabajo, además del
+                    usuario.
+                  </p>
+                  <br />
+                  <p>
+                    Actualmente, SDL Trados Studio incluye numerosos productos de
+                    gamas muy diversas, divididos gestión de experiencias web,
+                    gestión de contenidos técnicos, otros y, el más utilizado por
+                    los clientes generalmente, idiomas. Estos son algunos de los
+                    productos más conocidos: 
+                    <ol type="1">
+                      <li>
+                        Trados Studio: es la aplicación
+                        principal que incluye herramientas para analizar, preparar,
+                        gestionar y realizar traducciones, con ayuda o sin ayuda del
+                        motor de traducciones automáticas.
+                      </li>
+                      
+                      <li>
+                        SDL MultiTerm: es la
+                        aplicación de gestión terminológica que se integra con SDL
+                        Trados Studio para crear, añadir, editar y gestionar bases
+                        terminológicas.
+                      </li>
+                      
+                      <li>
+                        SDL Language Clou: es el acceso seguro al
+                    motor que se puede entrenar de traducciones automáticas de
+                    SDL. El cual también está integrado con SDL Trados Studio. 
+                      </li>
+                      <li>
+                        SDL
+                    OpenExchange Es el sitio web SDL OpenExchange que ofrece
+                    aplicaciones de ayuda para una gran cantidad de tareas
+                    relacionadas con el trabajo diario de traductores y gestores
+                    de traducción, también integrada con SDL Trados Studio.
+                      </li>
+                    </ol> 
+                  </p>
+                </div>
+                <div class="page__number">2</div>
+              </div>
+            </div>
+          </label>
+        </div>
+      </div>
+
+    </div>
+  
+  </body>
+</html>
