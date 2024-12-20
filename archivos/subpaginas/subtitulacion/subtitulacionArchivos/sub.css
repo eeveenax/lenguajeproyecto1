@@ -418,8 +418,8 @@ h2:hover {
 #herramientaT {
   position: relative;
   z-index: 3;
-  background: #136a8a, #267871;
-  background: linear-gradient(0deg, #136a8a, #267871);
+  background: #3b8aa6, #07534d;
+  background: linear-gradient(0deg, #3b8aa6, #07534d);
   width: 100%;
   height: 100%;
   display: flex;
